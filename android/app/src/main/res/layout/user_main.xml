@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activity_page">
+
+
+    <FrameLayout
+        android:id="@+id/flMainTabFragmentContainer"
+        style="@style/match_match"
+        android:layout_weight="1"></FrameLayout>
+
+    <View style="@style/divider_horizontal_1px_gray" />
+
+    <LinearLayout
+        style="@style/ll_horizontal_match_wrap"
+        android:background="@color/main_color"
+        android:alpha="0.5"
+        android:layout_height="@dimen/topbar_height">
+
+        <LinearLayout
+            android:id="@+id/llBottomTabTab0"
+            android:gravity="center"
+            style="@style/bottom_tab_ll"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivBottomTabTab0"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/wo_selector" />
+
+            <TextView
+                android:id="@+id/tvBottomTabTab0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="基本信息" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBottomTabTab1"
+            style="@style/bottom_tab_ll"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivBottomTabTab1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/xg_selector" />
+
+            <TextView
+                android:id="@+id/tvBottomTabTab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="修改" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

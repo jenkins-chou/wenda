@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>统计分析</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="${ctx}/layui/css/layui.css" media="all" />
+<link rel="stylesheet" href="${ctx}/css/font_eolqem241z66flxr.css"
+	media="all" />
+<link rel="stylesheet" href="${ctx}/css/news.css" media="all" />
+<script type="text/javascript" src="${ctx}/layui/layui.js"></script>
+</head>
+
+<body class="childrenBody">
+
+	<c:set var="type" value="${type}" />
+	<c:set var="data" value="${data}" />
+	<div class="layui-inline">
+		<div id="rc" style="height:300px;width:500px"></div>
+	</div>
+	<script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+	<script type="text/javascript">
+		var rcc = echarts.init(document.getElementById("rc"));
+
+		var rc = ${data}
+		var type = ${type};
+		var option1 = {
+			//标题
+			title : {
+				text : "用户关注统计",
+				subtext : "2019-3-10"
+			},
+
+			//鼠标放上去提示文字
+			tooltip : {
+				show : true
+			},
+			toolbox : {
+				show : true,
+				feature : {
+					mark : {
+						show : true
+					},
+					dataView : {
+						show : true,
+						readOnly : false
+					},
+					magicType : {
+						show : true,
+						type : [ 'line', 'bar', 'stack', 'tiled' ]
+					},
+					restore : {
+						show : true
+					},
+					saveAsImage : {
+						show : true
+					}
+				}
+			},
+			legend : {
+				data : [ "统计情况" ]
+			},
+			//横坐标 
+			xAxis : {
+				type : "category",
+				name : "类型",
+				data : type
+			},
+			//纵坐标
+			yAxis : {
+				type : "value",
+				name : "数量"
+			},
+			//数据
+			series : [ {
+				//数据关联名字
+				name : "访问量",
+				type : "bar",
+				data : rc
+			} ]
+		}
+		//图形实例化
+		rcc.setOption(option1);
+	</script>
+</body>
+</html>

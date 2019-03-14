@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录界面</title>
+<link rel="stylesheet" type="text/css" href="${ctx}/css/style.css" />
+<link rel="stylesheet" type="text/css" href="${ctx}/css/body.css" />
+</head>
+<body>
+	<div class="container">
+		<section id="content" style="margin-top:300px;">
+		<form action="${ctx}/manager/update">
+			<h1>用户更新</h1>
+			<div style=" float: left;width: 100%;margin: auto;">
+				<div style="float: left;width: 20%;margin:0 auto;height: 50px;">
+					<span style="line-height: 50px;text-align: center;">用户名:</span>
+				</div>
+				<div style="float: left;width: 70%;">
+					<input type="text" placeholder="用户名" required="" id="username"
+						name="username" value="${m.username}" /> <input name="id"
+						type="hidden" id="id" value="${m.id}" />
+				</div>
+			</div>
+			<div style=" float: left;width: 100%;margin: auto;">
+				<div style="float: left;width: 20%;margin:0 auto;height: 50px;">
+					<span style="line-height: 50px;text-align: center;">密码:</span>
+				</div>
+				<div style="float: left;width: 70%;">
+					<input type="password" placeholder="密碼" required="" id="password"
+						name="password" value="${m.password}" />
+				</div>
+			</div>
+			<div style=" float: left;width: 100%;margin: auto;">
+				<div style="float: left;width: 20%;margin:0 auto;height: 50px;">
+					<span style="line-height: 50px;text-align: center;">昵称:</span>
+				</div>
+				<div style="float: left;width: 70%;">
+					<input type="text" placeholder="昵称" required="" id="nickname"
+						name="nickname" value="${m.nickname}" />
+				</div>
+			</div>
+			<div style=" float: left;width: 100%;margin: auto;">
+				<div style="float: left;width: 20%;margin:0 auto;height: 50px;">
+					<span style="line-height: 50px;text-align: center;">联系方式:</span>
+				</div>
+				<div style="float: left;width: 70%;">
+					<input type="text" placeholder="联系方式" required="" id="mobile"
+						name="mobile" value="${m.mobile}" />
+				</div>
+			</div>
+			<div>
+				<!-- <input type="submit" value="Log in" /> -->
+				<input type="submit" value="更新" class="btn btn-primary"
+					id="js-btn-login" />
+			</div>
+		</form>
+		<!-- form -->
+		<div class="button">
+			<span class="help-block u-errormessage" id="js-server-helpinfo">&nbsp;</span>
+		</div>
+		<!-- button --> </section>
+		<!-- content -->
+	</div>
+	<!-- container -->
+
+	</div>
+</body>
+</html>

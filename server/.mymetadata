@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="wenda"
+  id="myeclipse.1548229503001"
+  context-root="/wenda"
+  j2ee-spec="5.0"
+  archive="wenda.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
