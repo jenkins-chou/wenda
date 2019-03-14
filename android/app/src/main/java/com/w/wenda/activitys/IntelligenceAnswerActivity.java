@@ -52,13 +52,14 @@ public class IntelligenceAnswerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_intelligence_answer);
         ButterKnife.bind(this);
         initData();
-
     }
 
     void initData(){
         datas = new ArrayList<>();
         datas.add(new MessageModel(MessageModel.MineMsg,"hello"));
         datas.add(new MessageModel(MessageModel.ServerMsgText,"Hi"));
+        datas.add(new MessageModel(MessageModel.ServerMsgImage,"Hi","","https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552565391653&di=e72d77c8ec206bcae819bd39f44213ef&imgtype=0&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F2e2eb9389b504fc27c224b2debdde71190ef6d9d.jpg"));
+        datas.add(new MessageModel(MessageModel.MineMsg,"这不是我需要的"));
 
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(1,1));
         multiDelegateAdapter = new MultiDelegateAdapter();

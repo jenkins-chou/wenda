@@ -15,7 +15,7 @@
 
     <color name="base_normal_navcolor">#666666</color>
     <color name="base_layout_color">#f6f6f6</color>
-    <color name="base_line_color">#dddddd</color>
+    <color name="base_line_color">#e0e0e0</color>
 
     <color name="base_font_color">#333333</color>
     <color name="base_font_color2">#666666</color>

@@ -1,5 +1,9 @@
 package com.w.wenda.adapater;
 
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.util.MultiTypeDelegate;
@@ -40,6 +44,14 @@ public class MultiDelegateAdapter extends BaseQuickAdapter<MessageModel, BaseVie
                 break;
             case MessageModel.ServerMsgImage:
                 helper.setText(R.id.message,entity.getMessage());
+
+                ImageView imageView = helper.getView(R.id.image);
+                if (imageView!=null&&entity.getImageUrl()!=null){
+                    RequestOptions requestOptions = new RequestOptions();
+                    requestOptions.placeholder(R.mipmap.icon_default);
+                    requestOptions.error(R.mipmap.icon_default);
+                    Glide.with(mContext).load(entity.getImageUrl()).apply(requestOptions).into(imageView);
+                }
                 break;
         }
     }

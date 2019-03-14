@@ -32,7 +32,23 @@ public class MessageModel {
 
     }
 
-    public MessageModel(int type,String message){
+    public String getWebUrl() {
+        return webUrl;
+    }
+
+    public void setWebUrl(String webUrl) {
+        this.webUrl = webUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public MessageModel(int type, String message){
         this.type = type;
         this.message = message;
     }
@@ -43,11 +59,14 @@ public class MessageModel {
         this.webUrl = webUrl;
         this.imageUrl = imageUrl;
     }
+
     @Override
     public String toString() {
         return "MessageModel{" +
                 "type=" + type +
                 ", message='" + message + '\'' +
+                ", webUrl='" + webUrl + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
 }
