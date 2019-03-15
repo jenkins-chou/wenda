@@ -25,7 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activitys.IntelligenceAnswerActivity" />
-        <activity android:name=".activitys.PreferenceSettingActivity"></activity>
+        <activity android:name=".activitys.PreferenceSettingActivity" />
+        <activity android:name=".activitys.WebActivity"></activity>
     </application>
 
 </manifest>

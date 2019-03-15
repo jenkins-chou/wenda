@@ -58,7 +58,7 @@ var loadList = function(first) {
 								sort : true,
 								fixed : 'left'
 							}, {
-								field : 'key',
+								field : 'input_value',
 								title : '问题关键字'
 							},{
 								field : 'answer',

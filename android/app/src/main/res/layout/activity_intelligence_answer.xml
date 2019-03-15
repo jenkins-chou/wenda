@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".activitys.IntelligenceAnswerActivity">
     <RelativeLayout
         android:id="@+id/header"
@@ -38,10 +40,11 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="智能问答助手"
+            android:text="智能小助手"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -97,37 +100,65 @@
                 android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
                 android:layout_height="1px"/>
+
             <ImageView
-                android:src="@mipmap/icon_keyboard"
-                android:layout_marginLeft="10dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
+                android:id="@+id/keyboard_icon"
                 android:layout_width="25dp"
-                android:layout_height="25dp" />
-            <LinearLayout
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_marginRight="10dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/icon_keyboard" />
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/keyboard_icon"
+                android:layout_toLeftOf="@+id/send_bar"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/common_noline_edittext"
+                    android:hint="请输入"
+                    android:textColorHint="#d0d0d0"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/send_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <ImageView
-                    android:src="@mipmap/emoji"
-                    android:layout_marginRight="5dp"
+                    android:id="@+id/emoji_icon"
                     android:layout_width="25dp"
-                    android:layout_height="25dp" />
+                    android:layout_height="25dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/emoji" />
+
                 <TextView
-                    android:text="发送"
-                    android:paddingTop="6dp"
+                    android:id="@+id/send_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/activity_intelligence_answer_send_button"
                     android:paddingBottom="6dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:textSize="12sp"
+                    android:paddingTop="6dp"
+                    android:text="发送"
+                    android:enabled="false"
                     android:textColor="@color/white"
-                    android:background="@drawable/activity_intelligence_answer_send_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textSize="12sp" />
             </LinearLayout>
         </RelativeLayout>
         <LinearLayout
@@ -139,9 +170,12 @@
                 android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
                 android:layout_height="1px"/>
+
             <android.support.v7.widget.RecyclerView
+                android:id="@+id/emoji_bar"
                 android:layout_width="match_parent"
-                android:layout_height="100dp">
+                android:layout_height="180dp"
+                android:visibility="gone">
 
             </android.support.v7.widget.RecyclerView>
         </LinearLayout>

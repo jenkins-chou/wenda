@@ -21,7 +21,7 @@
 		<div class="layui-form-item">
 			<label class="layui-form-label">关键字集合</label>
 			<div class="layui-input-block">
-				<input type="text" name="key" class="layui-input"
+				<input type="text" name="input_value" class="layui-input"
 					lay-verify="required" placeholder="请输入">
 			</div>
 		</div>
@@ -51,18 +51,23 @@
 		</div>
 		
 		<div class="layui-form-item">
-			<label class="layui-form-label">一级类别</label>
+			<label class="layui-form-label">一级分类映射</label>
 			<div class="layui-input-block">
-				<input type="text" name="first_classification" class="layui-input"
-					lay-verify="required" placeholder="请输入">
+				<select name="first_classification" lay-verify="required">
+					<option value="社会">社会</option>
+				</select>
 			</div>
 		</div>
 		
 		<div class="layui-form-item">
-			<label class="layui-form-label">二级类别</label>
+			<label class="layui-form-label">二级分类映射</label>
 			<div class="layui-input-block">
-				<input type="text" name="second_classification" class="layui-input"
-					lay-verify="required" placeholder="请输入">
+				<select name="second_classification" lay-verify="required">
+					<option value="文本">文本</option>
+					<option value="网址">网址</option>
+					<option value="图片">图片</option>
+					<option value="表情">表情</option>
+				</select>
 			</div>
 		</div>
 		

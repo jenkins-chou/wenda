@@ -20,6 +20,7 @@ import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
 
 import edu.wd.index.IndexController;
+import edu.wd.knowledge.controller.AnswerController;
 import edu.wd.knowledge.controller.KnowComprehensiveController;
 import edu.wd.knowledge.controller.KnowHistoryController;
 import edu.wd.knowledge.controller.KnowHumanityController;
@@ -94,6 +95,8 @@ public class SysConfig extends JFinalConfig {
 		me.add("/know_society", KnowSocietyController.class);
 		me.add("/know_history", KnowHistoryController.class);
 		me.add("/know_mapping", KnowMappingController.class);
+		
+		me.add("/answer", AnswerController.class);
 	}
 
 	/**
