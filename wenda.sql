@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50723
 File Encoding         : 65001
 
-Date: 2019-03-14 16:58:20
+Date: 2019-03-15 17:57:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -58,7 +58,7 @@ CREATE TABLE `his` (
   `answer` varchar(255) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=412 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=413 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of his
@@ -473,13 +473,14 @@ INSERT INTO `his` VALUES ('408', '32', '张信哲', '26', '2019-03-13 11:57:37',
 INSERT INTO `his` VALUES ('409', '32', '张信哲', '31', '2019-03-13 12:02:35', '你在说什么', '333', '对不起，在这里不能解答', '其他');
 INSERT INTO `his` VALUES ('410', '32', '张信哲', '30', '2019-03-13 12:02:42', '什么？', '222', '您好，请再说一次', '其他');
 INSERT INTO `his` VALUES ('411', '32', '张信哲', '15', '2019-03-13 13:38:50', 'hello', '你这里有雪梨买吗？什么价格？', '有的亲，我这里的雪梨是3块钱一斤的', '其他');
+INSERT INTO `his` VALUES ('412', '32', '张信哲', '19', '2019-03-15 11:30:44', '？？？', '好的，谢谢。', '谢谢您的光临，欢迎下次再来。', '其他');
 
 -- ----------------------------
 -- Table structure for intelligent_answer_record
 -- ----------------------------
 DROP TABLE IF EXISTS `intelligent_answer_record`;
 CREATE TABLE `intelligent_answer_record` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(255) NOT NULL AUTO_INCREMENT,
   `input_value` varchar(255) DEFAULT NULL,
   `key_record` varchar(255) DEFAULT NULL,
   `mapping_record` varchar(255) DEFAULT NULL,
@@ -490,11 +491,14 @@ CREATE TABLE `intelligent_answer_record` (
   `remark` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of intelligent_answer_record
 -- ----------------------------
+INSERT INTO `intelligent_answer_record` VALUES ('1', 'hello', '无匹配', '无匹配', '您在说什么呢？', null, '', '1552640694597', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('2', 'hello', '综合', '文本', 'hello，有什么可以帮到您', null, '', '1552640934036', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('3', 'hello', '综合', '文本', 'hello，有什么可以帮到您', null, '', '1552640986239', '', 'normal');
 
 -- ----------------------------
 -- Table structure for knowledge_base
@@ -525,7 +529,7 @@ INSERT INTO `knowledge_base` VALUES ('3', '测试', '标签', '类型', '分类�
 DROP TABLE IF EXISTS `knowledge_graph_comprehensive`;
 CREATE TABLE `knowledge_graph_comprehensive` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `key` varchar(255) DEFAULT NULL,
+  `input_value` varchar(255) DEFAULT NULL,
   `answer` varchar(255) DEFAULT NULL,
   `probably_answer` varchar(255) DEFAULT NULL,
   `label` varchar(255) DEFAULT NULL,
@@ -535,13 +539,20 @@ CREATE TABLE `knowledge_graph_comprehensive` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_graph_comprehensive
 -- ----------------------------
-INSERT INTO `knowledge_graph_comprehensive` VALUES ('1', '综合', '参考答案', '相似参考答案', '标签', '一级类别', '二级类别', '备注', null, 'normal');
-INSERT INTO `knowledge_graph_comprehensive` VALUES ('2', '关键字', '参考答案2', '相似参考答案', '标签2', '一级类别', '二级类别', '备注', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('1', '综合', '参考答案', '相似参考答案', '标签', '一级类别', '二级类别', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('2', '关键字', '参考答案2', '相似参考答案', '标签2', '一级类别', '二级类别', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('3', '你好', '你好啊，有什么可以帮到您', 'Hello', '问好', '综合', '文本', '备注', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('4', '你是谁', '我是您的私人助手啊，我叫小小', '在呢主人，我的名字叫小小', '回答', '综合', '文本', '备注', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('6', '今天天气', '查询不到天气情况呢', '或许还没有天气模块', '无', '综合', '文本', '无', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('7', '百度网址', 'http://baidu.com', 'http://baidu.com', '无', '综合', '网址', '无', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('8', 'hello,hi', 'hello，有什么可以帮到您', 'Hello', '无', '综合', '文本', '无', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('9', '爱奇艺网址是什么，爱奇艺，爱奇艺', 'http://iqiyi.com', 'http://iqiyi.com', '无', '综合', '网址', '无', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('10', '猫，图片', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', '无', '综合', '图片', '无', null, 'normal');
 
 -- ----------------------------
 -- Table structure for knowledge_graph_history
@@ -549,7 +560,7 @@ INSERT INTO `knowledge_graph_comprehensive` VALUES ('2', '关键字', '参考答
 DROP TABLE IF EXISTS `knowledge_graph_history`;
 CREATE TABLE `knowledge_graph_history` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `key` varchar(255) DEFAULT NULL,
+  `input_value` varchar(255) DEFAULT NULL,
   `answer` varchar(255) DEFAULT NULL,
   `probably_answer` varchar(255) DEFAULT NULL,
   `label` varchar(255) DEFAULT NULL,
@@ -572,7 +583,7 @@ INSERT INTO `knowledge_graph_history` VALUES ('1', '历史', '参考答案2', '�
 DROP TABLE IF EXISTS `knowledge_graph_humanity`;
 CREATE TABLE `knowledge_graph_humanity` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `key` varchar(255) DEFAULT NULL,
+  `input_value` varchar(255) DEFAULT NULL,
   `answer` varchar(255) DEFAULT NULL,
   `probably_answer` varchar(255) DEFAULT NULL,
   `label` varchar(255) DEFAULT NULL,
@@ -595,7 +606,7 @@ INSERT INTO `knowledge_graph_humanity` VALUES ('1', '100', '参考答案', '相�
 DROP TABLE IF EXISTS `knowledge_graph_natural`;
 CREATE TABLE `knowledge_graph_natural` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `key` varchar(255) DEFAULT NULL,
+  `input_value` varchar(255) DEFAULT NULL,
   `answer` varchar(255) DEFAULT NULL,
   `probably_answer` varchar(255) DEFAULT NULL,
   `label` varchar(255) DEFAULT NULL,
@@ -618,7 +629,7 @@ INSERT INTO `knowledge_graph_natural` VALUES ('1', '自然', '参考答案', '�
 DROP TABLE IF EXISTS `knowledge_graph_society`;
 CREATE TABLE `knowledge_graph_society` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `key` varchar(255) DEFAULT NULL,
+  `input_value` varchar(255) DEFAULT NULL,
   `answer` varchar(255) DEFAULT NULL,
   `probably_answer` varchar(255) DEFAULT NULL,
   `label` varchar(255) DEFAULT NULL,
@@ -648,12 +659,21 @@ CREATE TABLE `knowledge_mapping` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_mapping
 -- ----------------------------
-INSERT INTO `knowledge_mapping` VALUES ('2', '天气,气候,温度', '自然', '天气', '备注', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('2', '天气,气候,温度', '自然', '天气', '备注', null, 'delete');
+INSERT INTO `knowledge_mapping` VALUES ('3', '你好', '综合', '文本', '备注', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('4', '你是谁', '综合', '文本', '问好', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('5', '今天天气', '综合', '文本', '天气情况', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('6', '百度网址', '综合', '网址', '无', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('7', 'hello', '综合', '文本', '无', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('8', 'hi', '综合', '文本', '备注', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('9', '阿斯顿撒多撒', '综合', '文本', '大萨达撒', null, 'delete');
+INSERT INTO `knowledge_mapping` VALUES ('10', '爱奇艺网址', '综合', '网址', '无', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('11', '猫', '综合', '图片', '无', null, 'normal');
 
 -- ----------------------------
 -- Table structure for manager
