@@ -1,19 +1,76 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 用呗云借通APP日志
-Source Server Version : 50723
+Source Server         : manager
+Source Server Version : 50725
 Source Host           : localhost:3306
 Source Database       : wenda
 
 Target Server Type    : MYSQL
-Target Server Version : 50723
+Target Server Version : 50725
 File Encoding         : 65001
 
-Date: 2019-03-15 17:57:22
+Date: 2019-03-17 22:38:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for community_answer
+-- ----------------------------
+DROP TABLE IF EXISTS `community_answer`;
+CREATE TABLE `community_answer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `question_id` varchar(255) DEFAULT NULL,
+  `answer` varchar(255) DEFAULT NULL,
+  `creator_id` varchar(255) DEFAULT NULL,
+  `creator_name` varchar(255) DEFAULT NULL,
+  `creator_avatar` varchar(255) DEFAULT NULL,
+  `useful` int(255) DEFAULT NULL,
+  `useless` int(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `create_time` varchar(255) DEFAULT NULL,
+  `del` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of community_answer
+-- ----------------------------
+INSERT INTO `community_answer` VALUES ('1', '2', '哈哈哈哈', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_answer` VALUES ('2', '1', '！？？？？', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_answer` VALUES ('3', '1', '？？？', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_answer` VALUES ('4', '2', '？？？？', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_answer` VALUES ('5', '1', '年', '33', '周梅', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_answer` VALUES ('6', '1', '在什么地方', '33', '周梅', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_answer` VALUES ('7', '4', '没有', '33', '周梅', null, '0', '0', null, null, 'normal');
+
+-- ----------------------------
+-- Table structure for community_question
+-- ----------------------------
+DROP TABLE IF EXISTS `community_question`;
+CREATE TABLE `community_question` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `detail` varchar(255) DEFAULT NULL,
+  `creator_id` varchar(255) DEFAULT NULL,
+  `creator_name` varchar(255) DEFAULT NULL,
+  `creator_avatar` varchar(255) DEFAULT NULL,
+  `useful` int(255) DEFAULT NULL,
+  `useless` int(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `create_time` varchar(255) DEFAULT NULL,
+  `del` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of community_question
+-- ----------------------------
+INSERT INTO `community_question` VALUES ('1', '标题', '问题', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_question` VALUES ('2', '卧槽', '卧槽', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_question` VALUES ('3', '什么呀', '什么标题呀', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_question` VALUES ('4', '射雕英雄传', '你看过吗', '33', '周梅', null, '0', '0', null, null, 'normal');
 
 -- ----------------------------
 -- Table structure for fenlei
@@ -58,7 +115,7 @@ CREATE TABLE `his` (
   `answer` varchar(255) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=413 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=424 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of his
@@ -474,6 +531,17 @@ INSERT INTO `his` VALUES ('409', '32', '张信哲', '31', '2019-03-13 12:02:35',
 INSERT INTO `his` VALUES ('410', '32', '张信哲', '30', '2019-03-13 12:02:42', '什么？', '222', '您好，请再说一次', '其他');
 INSERT INTO `his` VALUES ('411', '32', '张信哲', '15', '2019-03-13 13:38:50', 'hello', '你这里有雪梨买吗？什么价格？', '有的亲，我这里的雪梨是3块钱一斤的', '其他');
 INSERT INTO `his` VALUES ('412', '32', '张信哲', '19', '2019-03-15 11:30:44', '？？？', '好的，谢谢。', '谢谢您的光临，欢迎下次再来。', '其他');
+INSERT INTO `his` VALUES ('413', '33', '周梅', '24', '2019-03-15 22:28:19', '你好', '核桃有不？', '有的，亲！', '零食');
+INSERT INTO `his` VALUES ('414', '33', '周梅', '20', '2019-03-15 22:28:27', '多钱', '还有其它快递吗？', '我们还有邮政，如果可以的话，我们可以发邮政的', '快递');
+INSERT INTO `his` VALUES ('415', '33', '周梅', '13', '2019-03-15 22:28:32', '你在哪', '如果是省内的话，多少天到', '省内的话，2-3天就可以到达了', '时间');
+INSERT INTO `his` VALUES ('416', '33', '周梅', '31', '2019-03-15 22:28:36', '快递', '333', '对不起，在这里不能解答', '其他');
+INSERT INTO `his` VALUES ('417', '33', '周梅', '30', '2019-03-15 22:37:38', '2', '222', '您好，请再说一次', '其他');
+INSERT INTO `his` VALUES ('418', '33', '周梅', '31', '2019-03-15 22:37:41', '3', '333', '对不起，在这里不能解答', '其他');
+INSERT INTO `his` VALUES ('419', '33', '周梅', '24', '2019-03-15 22:37:43', '4', '核桃有不？', '有的，亲！', '零食');
+INSERT INTO `his` VALUES ('420', '33', '周梅', '15', '2019-03-15 22:43:24', '你好', '你这里有雪梨买吗？什么价格？', '有的亲，我这里的雪梨是3块钱一斤的', '其他');
+INSERT INTO `his` VALUES ('421', '33', '周梅', '30', '2019-03-15 22:43:28', '在吗', '222', '您好，请再说一次', '其他');
+INSERT INTO `his` VALUES ('422', '33', '周梅', '25', '2019-03-15 22:43:59', '在吗', '那核桃怎么卖的？', '我们一大包要20元，里面有10包小的', '价格');
+INSERT INTO `his` VALUES ('423', '33', '周梅', '5', '2019-03-17 15:13:52', '你好', '你好，请问你的商店有什么卖', '我这里有很多卖的，请问你想买什么？', '其他');
 
 -- ----------------------------
 -- Table structure for intelligent_answer_record
@@ -491,7 +559,7 @@ CREATE TABLE `intelligent_answer_record` (
   `remark` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of intelligent_answer_record
@@ -499,6 +567,28 @@ CREATE TABLE `intelligent_answer_record` (
 INSERT INTO `intelligent_answer_record` VALUES ('1', 'hello', '无匹配', '无匹配', '您在说什么呢？', null, '', '1552640694597', '', 'normal');
 INSERT INTO `intelligent_answer_record` VALUES ('2', 'hello', '综合', '文本', 'hello，有什么可以帮到您', null, '', '1552640934036', '', 'normal');
 INSERT INTO `intelligent_answer_record` VALUES ('3', 'hello', '综合', '文本', 'hello，有什么可以帮到您', null, '', '1552640986239', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('4', 'hello', '综合', '文本', 'hello，有什么可以帮到您', null, '', '1552803637707', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('5', 'hi', '综合', '文本', 'hello，有什么可以帮到您', null, '', '1552803811142', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('6', 'hello', '综合', '文本', 'hello，有什么可以帮到您', null, '', '1552803815143', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('7', 'hi', '综合', '文本', 'hello，有什么可以帮到您', null, '', '1552803836760', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('8', '今天天气', '综合', '文本', '查询不到天气情况呢', '32', '', '1552803929419', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('9', 'hello', '综合', '文本', 'hello，有什么可以帮到您', '32', '', '1552804917215', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('10', '你好', '综合', '文本', '你好啊，有什么可以帮到您', '32', '', '1552806926958', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('11', '水果', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552808198939', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('12', '苹果', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552808207286', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('13', '苹果', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552808313215', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('14', '苹果', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552808345900', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('15', '雪梨', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552808355482', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('16', '苹果', '综合', '文本', '你想买哪种水果', '32', '', '1552808525087', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('17', '雪梨', '综合', '文本', '你想买哪种水果', '32', '', '1552808539618', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('18', '苹果', '综合', '文本', '你想买哪种水果', '32', '', '1552809289888', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('19', '苹果', '综合', '文本', '你想买哪种水果', '32', '', '1552809365437', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('20', '苹果', '综合', '文本', '你想买哪种水果', '32', '', '1552809369054', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('21', '苹果', '综合', '文本', '你想买哪种水果', '32', '', '1552809391437', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('22', '苹果', '综合', '文本', '你想买哪种水果', '32', '', '1552809399399', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('23', '网址', '综合', '网址', 'http://baidu.com', '32', '', '1552809582931', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('24', '爱奇艺', '综合', '网址', 'http://iqiyi.com', '32', '', '1552809594739', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('25', '网址', '综合', '网址', 'http://baidu.com', '32', '', '1552809628588', '', 'normal');
 
 -- ----------------------------
 -- Table structure for knowledge_base
@@ -539,7 +629,7 @@ CREATE TABLE `knowledge_graph_comprehensive` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_graph_comprehensive
@@ -552,7 +642,10 @@ INSERT INTO `knowledge_graph_comprehensive` VALUES ('6', '今天天气', '查询
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('7', '百度网址', 'http://baidu.com', 'http://baidu.com', '无', '综合', '网址', '无', null, 'normal');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('8', 'hello,hi', 'hello，有什么可以帮到您', 'Hello', '无', '综合', '文本', '无', null, 'normal');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('9', '爱奇艺网址是什么，爱奇艺，爱奇艺', 'http://iqiyi.com', 'http://iqiyi.com', '无', '综合', '网址', '无', null, 'normal');
-INSERT INTO `knowledge_graph_comprehensive` VALUES ('10', '猫，图片', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', '无', '综合', '图片', '无', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('10', '猫，图片', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', '无', '综合', '图片', '无', null, 'delete');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('11', '草莓价格', '14元 / 斤', '14元 / 斤', '无', '综合', '文本', '无', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('12', '雪梨，苹果，水果', '你想买哪种水果', '苹果3块钱一斤', '1', '综合', '文本', '3', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('13', '苹果', '苹果3块钱一斤', '苹果3块钱一斤，您想买多少', '2', '综合', '文本', '2', null, 'normal');
 
 -- ----------------------------
 -- Table structure for knowledge_graph_history
@@ -639,12 +732,13 @@ CREATE TABLE `knowledge_graph_society` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_graph_society
 -- ----------------------------
 INSERT INTO `knowledge_graph_society` VALUES ('1', '社会', '参考答案', '相似参考答案', '标签', '一级类别', '二级类别', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_society` VALUES ('2', '苹果，雪梨，水果', '你想买什么水果？', '苹果3块钱一斤', '水果', '社会', '文本', '1', null, 'normal');
 
 -- ----------------------------
 -- Table structure for knowledge_mapping
@@ -659,7 +753,7 @@ CREATE TABLE `knowledge_mapping` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_mapping
@@ -674,6 +768,9 @@ INSERT INTO `knowledge_mapping` VALUES ('8', 'hi', '综合', '文本', '备注',
 INSERT INTO `knowledge_mapping` VALUES ('9', '阿斯顿撒多撒', '综合', '文本', '大萨达撒', null, 'delete');
 INSERT INTO `knowledge_mapping` VALUES ('10', '爱奇艺网址', '综合', '网址', '无', null, 'normal');
 INSERT INTO `knowledge_mapping` VALUES ('11', '猫', '综合', '图片', '无', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('12', '草莓价格', '综合', '文本', '无', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('13', '雪梨，苹果，水果', '综合', '文本', '1', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('14', '苹果', '综合', '文本', '3', null, 'normal');
 
 -- ----------------------------
 -- Table structure for manager
@@ -698,7 +795,6 @@ INSERT INTO `manager` VALUES ('7', '5555', '5555', '李圣杰', '13243344356', '
 INSERT INTO `manager` VALUES ('8', '2345', '2345', '陈坤', '1345345876', '普通管理员');
 INSERT INTO `manager` VALUES ('9', '77777', '77777', '陈俊杰', '13454567899', '超级管理员');
 INSERT INTO `manager` VALUES ('10', '123456', '123456', '小薇', '13458786547', '超级管理员');
-INSERT INTO `manager` VALUES ('11', '1233', '1233', '吴昊', '13243565783', '普通管理员');
 
 -- ----------------------------
 -- Table structure for preference_base
@@ -799,7 +895,7 @@ CREATE TABLE `user` (
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('31', '李言', null, '12346', '12346', '13243536264', '屏蔽');
-INSERT INTO `user` VALUES ('32', '张信哲', null, '12347', '12347', '13243566332', '正常');
+INSERT INTO `user` VALUES ('32', '张信哲', null, '12347', '12347', '13243566332', '屏蔽');
 INSERT INTO `user` VALUES ('33', '周梅', null, '12348', '12348', '13243536214', '正常');
 INSERT INTO `user` VALUES ('34', '张海', null, '12349', '12349', '13243362325', '正常');
 INSERT INTO `user` VALUES ('35', '周围围', null, '12350', '12350', '13243536524', '正常');
