@@ -2638,3 +2638,885 @@ java.lang.Error: Unresolved compilation problems:
 
 2019-03-14 15:04:15
 [WARN]-[Thread: qtp1599771323-22]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 13:34:34
+[WARN]-[Thread: qtp1599771323-18 Selector0]-[org.eclipse.jetty.io.nio.SelectorManager$SelectSet.doSelect()]: Selector org.eclipse.jetty.io.nio.SelectorManager$SelectSet@7505f7d8 keys=0 selected=0 is too busy, pausing!
+
+2019-03-15 14:40:31
+[WARN]-[Thread: qtp1599771323-21]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 14:40:31
+[WARN]-[Thread: qtp1599771323-24]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 15:06:24
+[ERROR]-[Thread: qtp1599771323-19]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=%E4%BD%A0%E8%AF%B4%E5%95%A5%E5%91%A2&question_type=1001
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:87)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	... 25 more
+Caused by: java.lang.NoClassDefFoundError: org/ansj/splitWord/analysis/ToAnalysis
+	at edu.wd.knowledge.controller.AnswerController.splitMessage(AnswerController.java:27)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:17)
+	... 30 more
+Caused by: java.lang.ClassNotFoundException: org.ansj.splitWord.analysis.ToAnalysis
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:430)
+	at com.jfinal.server.JFinalClassLoader.loadClass(JFinalClassLoader.java:53)
+	... 32 more
+
+2019-03-15 15:07:12
+[WARN]-[Thread: qtp578866604-23]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 15:07:12
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 15:07:12
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 15:13:04
+[WARN]-[Thread: qtp578866604-18]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 15:13:04
+[ERROR]-[Thread: qtp578866604-18]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 15:13:04
+[ERROR]-[Thread: qtp578866604-18]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 15:13:06
+[ERROR]-[Thread: qtp578866604-18]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=%E4%BD%A0%E5%A5%BD&question_type=1001
+com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:662)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:910)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:2796)
+	at com.mysql.jdbc.PreparedStatement.setString(PreparedStatement.java:3627)
+	at com.mysql.jdbc.PreparedStatement.setObject(PreparedStatement.java:3029)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.setObject(NewProxyPreparedStatement.java:365)
+	at com.jfinal.plugin.activerecord.dialect.Dialect.fillStatement(Dialect.java:226)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:642)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:660)
+	... 31 more
+
+2019-03-15 15:13:36
+[WARN]-[Thread: qtp578866604-23]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 15:13:36
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 15:13:36
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 15:13:38
+[ERROR]-[Thread: qtp578866604-23]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=%E4%BD%A0%E5%A5%BD&question_type=1001
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'ä½ å¥½' in 'where clause'
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:662)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:672)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'ä½ å¥½' in 'where clause'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1467)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:76)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:643)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:660)
+	... 32 more
+
+2019-03-15 15:14:25
+[WARN]-[Thread: qtp578866604-18]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 15:14:25
+[ERROR]-[Thread: qtp578866604-18]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 15:14:25
+[ERROR]-[Thread: qtp578866604-18]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 15:20:00
+[WARN]-[Thread: qtp578866604-21]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 15:20:00
+[ERROR]-[Thread: qtp578866604-21]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 15:20:00
+[ERROR]-[Thread: qtp578866604-21]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 15:20:41
+[WARN]-[Thread: qtp578866604-20]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 15:20:41
+[ERROR]-[Thread: qtp578866604-20]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 15:20:41
+[ERROR]-[Thread: qtp578866604-20]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 15:21:01
+[WARN]-[Thread: qtp578866604-23]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 15:21:01
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 15:21:01
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 16:01:36
+[WARN]-[Thread: qtp578866604-20]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 16:01:36
+[ERROR]-[Thread: qtp578866604-20]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 16:01:36
+[ERROR]-[Thread: qtp578866604-20]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 16:01:37
+[ERROR]-[Thread: qtp578866604-20]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=%E4%BD%A0%E5%A5%BD&question_type=1001
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key like '%ä½ å¥½%' and second_classification like '%æ–‡æœ¬%'' at line 1
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:662)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:672)
+	at edu.wd.knowledge.controller.AnswerController.getAnswerFromDatabase(AnswerController.java:97)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key like '%ä½ å¥½%' and second_classification like '%æ–‡æœ¬%'' at line 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1467)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeQuery(NewProxyPreparedStatement.java:76)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:643)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:660)
+	... 33 more
+
+2019-03-15 16:08:12
+[WARN]-[Thread: qtp578866604-23]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 16:08:12
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 16:08:12
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 16:10:53
+[WARN]-[Thread: qtp578866604-22]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 16:10:53
+[ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 16:10:53
+[ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 16:12:08
+[WARN]-[Thread: qtp578866604-17]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-15 16:12:08
+[ERROR]-[Thread: qtp578866604-17]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-15 16:12:08
+[ERROR]-[Thread: qtp578866604-17]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-15 16:53:16
+[ERROR]-[Thread: qtp578866604-23]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=%E7%99%BE%E5%BA%A6%E7%BD%91%E5%9D%80&question_type=1001
+com.jfinal.plugin.activerecord.ActiveRecordException: The attribute name does not exist: "evalute"
+	at com.jfinal.plugin.activerecord.Model.set(Model.java:217)
+	at edu.wd.knowledge.controller.AnswerController.sendMessageToClient(AnswerController.java:238)
+	at edu.wd.knowledge.controller.AnswerController.getAnswerFromDatabase(AnswerController.java:112)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+
+2019-03-15 17:07:03
+[ERROR]-[Thread: qtp578866604-24]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=hello&question_type=1001
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:533)
+	at edu.wd.knowledge.controller.AnswerController.sendMessageToClient(AnswerController.java:242)
+	at edu.wd.knowledge.controller.AnswerController.getAnswerFromDatabase(AnswerController.java:112)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:105)
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:528)
+	... 33 more
+
+2019-03-15 17:08:59
+[ERROR]-[Thread: qtp578866604-20]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=hi&question_type=1001
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:533)
+	at edu.wd.knowledge.controller.AnswerController.sendMessageToClient(AnswerController.java:242)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:105)
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:528)
+	... 32 more
+
+2019-03-15 17:09:37
+[ERROR]-[Thread: qtp578866604-22]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=hello&question_type=1001
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.CommunicationsException: Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: Socket closed
+
+STACKTRACE:
+
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:113)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:160)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:188)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:1994)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2411)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2916)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:105)
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:528)
+	at edu.wd.knowledge.controller.AnswerController.sendMessageToClient(AnswerController.java:242)
+	at edu.wd.knowledge.controller.AnswerController.getAnswerFromDatabase(AnswerController.java:112)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 39 ms ago.
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:533)
+	at edu.wd.knowledge.controller.AnswerController.sendMessageToClient(AnswerController.java:242)
+	at edu.wd.knowledge.controller.AnswerController.getAnswerFromDatabase(AnswerController.java:112)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.CommunicationsException: Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: Socket closed
+
+STACKTRACE:
+
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:113)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:160)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:188)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:1994)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2411)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2916)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:105)
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:528)
+	at edu.wd.knowledge.controller.AnswerController.sendMessageToClient(AnswerController.java:242)
+	at edu.wd.knowledge.controller.AnswerController.getAnswerFromDatabase(AnswerController.java:112)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 39 ms ago.
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2622)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2916)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:105)
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:528)
+	... 33 more
+
+2019-03-15 17:10:00
+[ERROR]-[Thread: qtp578866604-20]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=hi&question_type=1001
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'PRIMARY'
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:533)
+	at edu.wd.knowledge.controller.AnswerController.sendMessageToClient(AnswerController.java:242)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'PRIMARY'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:105)
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:528)
+	... 32 more
+
+2019-03-15 17:10:52
+[ERROR]-[Thread: qtp578866604-22]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=hello&question_type=1001
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'PRIMARY'
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:533)
+	at edu.wd.knowledge.controller.AnswerController.sendMessageToClient(AnswerController.java:242)
+	at edu.wd.knowledge.controller.AnswerController.getAnswerFromDatabase(AnswerController.java:112)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'PRIMARY'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:105)
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:528)
+	... 33 more
+
+2019-03-15 19:57:09
+[WARN]-[Thread: qtp353842779-24]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 19:57:09
+[WARN]-[Thread: qtp353842779-26]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:27:55
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:27:55
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:28:00
+[WARN]-[Thread: qtp353842779-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:28:00
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:29:13
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:29:13
+[WARN]-[Thread: qtp353842779-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:29:52
+[WARN]-[Thread: qtp353842779-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:29:52
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:30:28
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:30:28
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:34:05
+[WARN]-[Thread: qtp353842779-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:34:06
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:34:09
+[WARN]-[Thread: qtp353842779-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 22:34:09
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 23:01:26
+[WARN]-[Thread: qtp353842779-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 23:01:26
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 23:01:29
+[WARN]-[Thread: qtp353842779-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 23:01:30
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 23:01:47
+[WARN]-[Thread: qtp353842779-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 23:01:47
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 23:13:11
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 23:13:11
+[WARN]-[Thread: qtp353842779-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 23:13:11
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-15 23:13:11
+[WARN]-[Thread: qtp353842779-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-16 09:48:47
+[WARN]-[Thread: qtp353842779-22]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /know_humanity/tohtmllist
+
+2019-03-17 14:20:39
+[ERROR]-[Thread: qtp353842779-32]-[com.jfinal.core.ActionHandler.handle()]: /answer/getAnswer?question=hi&question_type=1001
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Duplicate entry '4' for key 'PRIMARY'
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:533)
+	at edu.wd.knowledge.controller.AnswerController.sendMessageToClient(AnswerController.java:249)
+	at edu.wd.knowledge.controller.AnswerController.getAnswerFromDatabase(AnswerController.java:112)
+	at edu.wd.knowledge.controller.AnswerController.getAnswer(AnswerController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException: Duplicate entry '4' for key 'PRIMARY'
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:931)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:2985)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1631)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1723)
+	at com.mysql.jdbc.Connection.execSQL(Connection.java:3283)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1332)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1604)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1519)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1504)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:105)
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:528)
+	... 33 more
+
+2019-03-17 15:31:09
+[WARN]-[Thread: qtp353842779-74]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /know_statistics/toHtml
+
+2019-03-17 15:33:21
+[WARN]-[Thread: qtp353842779-74]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /know_statistics/toHtml
+
+2019-03-17 15:33:27
+[WARN]-[Thread: qtp353842779-74]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /know_statistics/toHtml
+
+2019-03-17 15:38:37
+[WARN]-[Thread: qtp353842779-74]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-17 15:38:37
+[WARN]-[Thread: qtp353842779-74]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-17 15:38:40
+[WARN]-[Thread: qtp353842779-33]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-17 15:38:40
+[WARN]-[Thread: qtp353842779-74]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null

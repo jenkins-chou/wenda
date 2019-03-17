@@ -20,12 +20,18 @@ import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
 
 import edu.wd.index.IndexController;
+import edu.wd.knowledge.controller.AnswerController;
+import edu.wd.knowledge.controller.AnswerStatisticsController;
+import edu.wd.knowledge.controller.CommunityAnswerController;
+import edu.wd.knowledge.controller.CommunityQuestionController;
 import edu.wd.knowledge.controller.KnowComprehensiveController;
 import edu.wd.knowledge.controller.KnowHistoryController;
 import edu.wd.knowledge.controller.KnowHumanityController;
 import edu.wd.knowledge.controller.KnowMappingController;
 import edu.wd.knowledge.controller.KnowNaturalController;
 import edu.wd.knowledge.controller.KnowSocietyController;
+import edu.wd.model.CommunityAnswerModel;
+import edu.wd.model.CommunityQuestionModel;
 import edu.wd.model.IntelligentAnswerRecord;
 import edu.wd.model.KnowBaseModel;
 import edu.wd.model.KnowledgeComprehensiveModel;
@@ -94,6 +100,12 @@ public class SysConfig extends JFinalConfig {
 		me.add("/know_society", KnowSocietyController.class);
 		me.add("/know_history", KnowHistoryController.class);
 		me.add("/know_mapping", KnowMappingController.class);
+		me.add("/know_statistics", AnswerStatisticsController.class);
+		
+		me.add("/answer", AnswerController.class);
+		
+		me.add("/community_question", CommunityQuestionController.class);
+		me.add("/community_answer", CommunityAnswerController.class);
 	}
 
 	/**
@@ -127,6 +139,10 @@ public class SysConfig extends JFinalConfig {
 		arp.addMapping("knowledge_graph_society", KnowledgeSocietyModel.class);
 		arp.addMapping("knowledge_graph_humanity", KnowledgeHumanityModel.class);
 		arp.addMapping("knowledge_mapping", KnowledgeMappingModel.class);
+		
+		//问答社区model映射
+		arp.addMapping("community_question", CommunityQuestionModel.class);
+		arp.addMapping("community_answer", CommunityAnswerModel.class);
 	}
 
 	/**

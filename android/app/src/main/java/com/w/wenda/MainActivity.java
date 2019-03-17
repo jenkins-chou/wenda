@@ -7,14 +7,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.jaeger.library.StatusBarUtil;
+import com.w.wenda.activitys.CommunityQuestionActivity;
 import com.w.wenda.activitys.IntelligenceAnswerActivity;
+import com.w.wenda.activitys.SettingActivity;
 import com.w.wenda.base.MyBaseActivity;
+import com.w.wenda.util.AccountUtil;
 
 import org.raphets.roundimageview.RoundImageView;
 
@@ -44,12 +48,30 @@ public class MainActivity extends MyBaseActivity {
         startActivity(new Intent(MainActivity.this,type_choose.class).putExtra("type","全部"));
     }
 
+    @OnClick(R.id.community)
+    void community(){
+        startActivity(new Intent(MainActivity.this,CommunityQuestionActivity.class));
+    }
+
+    @OnClick(R.id.quit)
+    void quit(){
+        startActivity(new Intent(this,UserLogin.class));
+        AccountUtil.clearUser(this);
+        Toast.makeText(this, "退出成功", Toast.LENGTH_SHORT).show();
+        finish();
+
+    }
+
+    @OnClick(R.id.setting)
+    void setting(){
+        startActivity(new Intent(this,SettingActivity.class));
+    }
+
     @Override
     protected void initUI() {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         StatusBarUtil.setColor(this,getResources().getColor(R.color.black),0);
-
         Glide.with(this)
                 .load("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552456252475&di=f952aba264e27b091c67fe8cc9fae6dd&imgtype=0&src=http%3A%2F%2Fphoto.16pic.com%2F00%2F51%2F93%2F16pic_5193989_b.jpg")
                 .into(frag_attention_g1);

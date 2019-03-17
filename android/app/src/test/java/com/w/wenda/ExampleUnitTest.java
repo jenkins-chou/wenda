@@ -15,7 +15,6 @@ public class ExampleUnitTest {
 
     @Test
     public void addition_isCorrect() {
-        String str = "你好啊，jack";
-        System.out.println(ToAnalysis.parse(str));
+
     }
 }

@@ -27,7 +27,7 @@
             android:gravity="left"
             android:padding="12dp"
             android:stateListAnimator="@null"
-            android:textColor="@color/base_font_color2" />
+            android:textColor="@color/main_color_light" />
 
 
     </LinearLayout>

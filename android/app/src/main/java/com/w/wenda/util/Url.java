@@ -2,7 +2,12 @@ package com.w.wenda.util;
 
 
 public class Url {
+    public static String url = "http://xxwf8r.natappfree.cc/";
     public static String url() {
-        return "http://fhuadn.natappfree.cc/";
-        }
+        return url;
+    }
+
+    public static void setUrl(String url1){
+        url = url1;
+    }
 }

@@ -11,15 +11,21 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 import com.w.wenda.R;
+import com.w.wenda.greendao.DaoMaster;
+import com.w.wenda.greendao.DaoSession;
 import com.w.wenda.pojo.User;
+
+import org.greenrobot.greendao.database.Database;
 
 import java.io.File;
 
 public class MyApplication extends Application {
+    public final static String DATABASE_NAME = "message_record";
+    public static DaoSession daoSession;
     public static Context applicationContext;
-    public User u;
+    public static User u;
 
-    public User getU() {
+    public static User getU() {
         return u;
     }
 
@@ -33,7 +39,6 @@ public class MyApplication extends Application {
         if (app == null) {
             app = new MyApplication();
         }
-
         return app;
     }
 
@@ -57,9 +62,18 @@ public class MyApplication extends Application {
                 .tasksProcessingOrder(QueueProcessingType.LIFO).build();
         ImageLoader.getInstance().init(config);
 
+        setupDataBase();//初始化greendao的sqlite数据库
+    }
 
+    void setupDataBase(){
+        DaoMaster.DevOpenHelper openHelper = new DaoMaster.DevOpenHelper(applicationContext,DATABASE_NAME);
+        Database db = openHelper.getWritableDb();
+        DaoMaster daoMaster = new DaoMaster(db);
+        daoSession = daoMaster.newSession();
+    }
 
-
+    public static DaoSession getDaoSession(){
+        return daoSession;
     }
 
 }

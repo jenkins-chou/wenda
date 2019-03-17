@@ -29,16 +29,25 @@
 		<div class="layui-form-item">
 			<label class="layui-form-label">一级分类映射</label>
 			<div class="layui-input-block">
-				<input type="text" name="key" class="layui-input"
-					lay-verify="required" placeholder="请输入">
+				<select name="key" lay-verify="required">
+					<option value="综合">综合</option>
+					<option value="人文">人文</option>
+					<option value="自然">自然</option>
+					<option value="历史">历史</option>
+					<option value="社会">社会</option>
+				</select>
 			</div>
 		</div>
 		
 		<div class="layui-form-item">
 			<label class="layui-form-label">二级分类映射</label>
 			<div class="layui-input-block">
-				<input type="text" name="mapping" class="layui-input"
-					lay-verify="required" placeholder="请输入">
+				<select name="mapping" lay-verify="required">
+					<option value="文本">文本</option>
+					<option value="网址">网址</option>
+					<option value="图片">图片</option>
+					<option value="表情">表情</option>
+				</select>
 			</div>
 		</div>
 		
