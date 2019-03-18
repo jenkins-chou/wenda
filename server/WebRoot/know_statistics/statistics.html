@@ -14,11 +14,24 @@
 <link rel="stylesheet" href="${ctx}/css/font_eolqem241z66flxr.css"
 	media="all" />
 <link rel="stylesheet" href="${ctx}/css/news.css" media="all" />
-<script type="text/javascript" src="${ctx}/layui/layui.js"></script>
+ <script type="text/javascript" src="${ctx}/layui/layui.js"></script>
 </head>
-<body>
+<body style="height:100%">
 	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<h1 style="margin-left:50px;margin-top:20px">各类问题数目统计</h1>
     <div id="main" style="height:400px"></div>
+    <h1 style="margin-left:50px;margin-top:20px">系统回答记录统计</h1>
+    <div id="div_answer_record" style="height:400px"></div>
+    <h1 style="margin-left:50px;">综合类问题统计</h1>
+    <div id="div_comprehensive" style="height:400px"></div>
+    <h1 style="margin-left:50px;">自然类问题统计</h1>
+    <div id="div_natural" style="height:400px"></div>
+    <h1 style="margin-left:50px;">历史类问题统计</h1>
+    <div id="div_history" style="height:400px"></div>
+    <h1 style="margin-left:50px;">社会类问题统计</h1>
+    <div id="div_society" style="height:400px"></div>
+    
+    
     <!-- ECharts单文件引入 -->
     <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
     <script type="text/javascript">
@@ -28,48 +41,8 @@
                 echarts: 'http://echarts.baidu.com/build/dist'
             }
         });
-        
-        // 使用
-        require(
-            [
-                'echarts',
-                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
-            ],
-            function (ec) {
-                // 基于准备好的dom，初始化echarts图表
-                var myChart = ec.init(document.getElementById('main')); 
-                
-                var option = {
-                    tooltip: {
-                        show: true
-                    },
-                    legend: {
-                        data:['销量']
-                    },
-                    xAxis : [
-                        {
-                            type : 'category',
-                            data : ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-                        }
-                    ],
-                    yAxis : [
-                        {
-                            type : 'value'
-                        }
-                    ],
-                    series : [
-                        {
-                            "name":"销量",
-                            "type":"bar",
-                            "data":[5, 20, 40, 10, 10, 20]
-                        }
-                    ]
-                };
-        
-                // 为echarts对象加载数据 
-                myChart.setOption(option); 
-            }
-        );
     </script>
+	<script type="text/javascript" id="addjs"
+		src="${ctx}/know_statistics/statistics.js?ctx=${ctx}&&id=${id!''}"></script>
 </body>
 </html>

@@ -29,9 +29,8 @@
 		<div class="layui-form-item">
 			<label class="layui-form-label">一级分类映射</label>
 			<div class="layui-input-block">
-				<select name="key" lay-verify="required">
+				<select name="key_first" lay-verify="required">
 					<option value="综合">综合</option>
-					<option value="人文">人文</option>
 					<option value="自然">自然</option>
 					<option value="历史">历史</option>
 					<option value="社会">社会</option>
@@ -46,7 +45,6 @@
 					<option value="文本">文本</option>
 					<option value="网址">网址</option>
 					<option value="图片">图片</option>
-					<option value="表情">表情</option>
 				</select>
 			</div>
 		</div>
@@ -65,6 +63,7 @@
 				<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 			</div>
 		</div>
+		<input type="hidden" name="id"></input>
 	</form>
 	<script type="text/javascript" src="${ctx}/layui/layui.js"></script>
 	<script type="text/javascript" id="addjs"

@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : manager
-Source Server Version : 50725
+Source Server         : 用呗云借通APP日志
+Source Server Version : 50723
 Source Host           : localhost:3306
 Source Database       : wenda
 
 Target Server Type    : MYSQL
-Target Server Version : 50725
+Target Server Version : 50723
 File Encoding         : 65001
 
-Date: 2019-03-17 22:38:07
+Date: 2019-03-18 15:45:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -629,13 +629,13 @@ CREATE TABLE `knowledge_graph_comprehensive` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_graph_comprehensive
 -- ----------------------------
-INSERT INTO `knowledge_graph_comprehensive` VALUES ('1', '综合', '参考答案', '相似参考答案', '标签', '一级类别', '二级类别', '备注', null, 'delete');
-INSERT INTO `knowledge_graph_comprehensive` VALUES ('2', '关键字', '参考答案2', '相似参考答案', '标签2', '一级类别', '二级类别', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('1', '综合', '参考答案', '相似参考答案', '标签', '一级类别', '文本', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('2', '关键字', '参考答案2', '相似参考答案', '标签2', '一级类别', '文本', '备注', null, 'delete');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('3', '你好', '你好啊，有什么可以帮到您', 'Hello', '问好', '综合', '文本', '备注', null, 'normal');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('4', '你是谁', '我是您的私人助手啊，我叫小小', '在呢主人，我的名字叫小小', '回答', '综合', '文本', '备注', null, 'normal');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('6', '今天天气', '查询不到天气情况呢', '或许还没有天气模块', '无', '综合', '文本', '无', null, 'normal');
@@ -644,8 +644,11 @@ INSERT INTO `knowledge_graph_comprehensive` VALUES ('8', 'hello,hi', 'hello，�
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('9', '爱奇艺网址是什么，爱奇艺，爱奇艺', 'http://iqiyi.com', 'http://iqiyi.com', '无', '综合', '网址', '无', null, 'normal');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('10', '猫，图片', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', '无', '综合', '图片', '无', null, 'delete');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('11', '草莓价格', '14元 / 斤', '14元 / 斤', '无', '综合', '文本', '无', null, 'normal');
-INSERT INTO `knowledge_graph_comprehensive` VALUES ('12', '雪梨，苹果，水果', '你想买哪种水果', '苹果3块钱一斤', '1', '综合', '文本', '3', null, 'normal');
-INSERT INTO `knowledge_graph_comprehensive` VALUES ('13', '苹果', '苹果3块钱一斤', '苹果3块钱一斤，您想买多少', '2', '综合', '文本', '2', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('12', '雪梨，苹果，水果', '你想买哪种水果', '苹果3块钱一斤', '1', '综合', '文本', '无', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('13', '苹果', '苹果3块钱一斤', '苹果3块钱一斤，您想买多少', '2', '综合', '文本', '无', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('14', '测试', '参考答案', '相似参考答案', '标签', '综合', '第二分类', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('15', '测试', '参考答案', '相似参考答案', '标签', '综合', '第二分类', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('16', '测试', '参考答案', '相似参考答案', '标签', '综合', '第二分类', '备注', null, 'normal');
 
 -- ----------------------------
 -- Table structure for knowledge_graph_history
@@ -663,12 +666,14 @@ CREATE TABLE `knowledge_graph_history` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_graph_history
 -- ----------------------------
-INSERT INTO `knowledge_graph_history` VALUES ('1', '历史', '参考答案2', '相似参考答案', '标签', '一级类别', '二级类别', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_history` VALUES ('1', '历史', '参考答案2', '相似参考答案', '标签', '一级类别', '图片', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_history` VALUES ('2', '去年草莓的均价', '15元 / 斤', '相似参考答案', '标签', '历史', '文本', '备注', null, 'normal');
+INSERT INTO `knowledge_graph_history` VALUES ('3', '测试', '参考答案', '相似参考答案', '标签', '历史', '第二分类', '备注', null, 'delete');
 
 -- ----------------------------
 -- Table structure for knowledge_graph_humanity
@@ -709,12 +714,14 @@ CREATE TABLE `knowledge_graph_natural` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_graph_natural
 -- ----------------------------
-INSERT INTO `knowledge_graph_natural` VALUES ('1', '自然', '参考答案', '相似参考答案', '标签', '一级类别', '二级类别', '备注', null, 'normal');
+INSERT INTO `knowledge_graph_natural` VALUES ('1', '自然', '参考答案', '相似参考答案', '标签', '自然', '文本', '备注22', null, 'normal');
+INSERT INTO `knowledge_graph_natural` VALUES ('2', '今天天气', '参考答案', '相似参考答案', '标签', '自然', '网址', '无', null, 'normal');
+INSERT INTO `knowledge_graph_natural` VALUES ('3', '测试', '参考答案', '相似参考答案', '标签', '自然', '第二分类', '备注', null, 'delete');
 
 -- ----------------------------
 -- Table structure for knowledge_graph_society
@@ -732,13 +739,14 @@ CREATE TABLE `knowledge_graph_society` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_graph_society
 -- ----------------------------
-INSERT INTO `knowledge_graph_society` VALUES ('1', '社会', '参考答案', '相似参考答案', '标签', '一级类别', '二级类别', '备注', null, 'delete');
-INSERT INTO `knowledge_graph_society` VALUES ('2', '苹果，雪梨，水果', '你想买什么水果？', '苹果3块钱一斤', '水果', '社会', '文本', '1', null, 'normal');
+INSERT INTO `knowledge_graph_society` VALUES ('1', '社会', '参考答案', '相似参考答案', '标签', '一级类别', '网址', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_society` VALUES ('2', '苹果，雪梨，水果', '你想买什么水果？', '苹果3块钱一斤', '水果', '社会', '文本', 'beizhu', null, 'normal');
+INSERT INTO `knowledge_graph_society` VALUES ('3', '测试', '参考答案', '相似参考答案', '标签', '社会', '第二分类', '备注', null, 'delete');
 
 -- ----------------------------
 -- Table structure for knowledge_mapping
@@ -747,13 +755,13 @@ DROP TABLE IF EXISTS `knowledge_mapping`;
 CREATE TABLE `knowledge_mapping` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `input_value` varchar(255) DEFAULT NULL,
-  `key` varchar(255) DEFAULT NULL,
+  `key_first` varchar(255) DEFAULT NULL,
   `mapping` varchar(255) DEFAULT NULL,
   `remark` varchar(255) DEFAULT NULL,
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_mapping
@@ -771,6 +779,9 @@ INSERT INTO `knowledge_mapping` VALUES ('11', '猫', '综合', '图片', '无', 
 INSERT INTO `knowledge_mapping` VALUES ('12', '草莓价格', '综合', '文本', '无', null, 'normal');
 INSERT INTO `knowledge_mapping` VALUES ('13', '雪梨，苹果，水果', '综合', '文本', '1', null, 'normal');
 INSERT INTO `knowledge_mapping` VALUES ('14', '苹果', '综合', '文本', '3', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('15', '今天天气大萨达撒多', null, '文本', '无', null, 'delete');
+INSERT INTO `knowledge_mapping` VALUES ('16', '你好', '综合', '文本', '大萨达撒', null, 'delete');
+INSERT INTO `knowledge_mapping` VALUES ('17', '1', '2', '3', '4', null, 'delete');
 
 -- ----------------------------
 -- Table structure for manager
@@ -784,7 +795,7 @@ CREATE TABLE `manager` (
   `mobile` varchar(255) DEFAULT NULL,
   `state` varchar(255) DEFAULT '超级管理员',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of manager
@@ -818,7 +829,7 @@ CREATE TABLE `preference_base` (
 -- ----------------------------
 INSERT INTO `preference_base` VALUES ('1', '自然知识图谱', 'dsadas', '标签', '自然', '100', '备注', null, 'normal');
 INSERT INTO `preference_base` VALUES ('2', '人文知识图谱', '等级', '标签', '人文', '关键字', '备注', null, 'normal');
-INSERT INTO `preference_base` VALUES ('3', '历史知识图谱', null, null, '历史', null, null, null, 'normal');
+INSERT INTO `preference_base` VALUES ('3', '历史知识图谱', '无', '无', '历史', '无', '无', null, 'normal');
 INSERT INTO `preference_base` VALUES ('4', '社会知识图谱', '无', '标签', '社会', '关键字', '无', null, 'normal');
 INSERT INTO `preference_base` VALUES ('5', '综合知识图谱', '无', '标签', '综合', '无', '无', null, 'normal');
 INSERT INTO `preference_base` VALUES ('6', '其他', '无', '无', '无', '无', '无', null, 'delete');

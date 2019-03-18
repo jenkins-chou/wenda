@@ -61,7 +61,7 @@ var loadList = function(first) {
 								field : 'input_value',
 								title : '用户可能输入的关键字'
 							},{
-								field : 'key',
+								field : 'key_first',
 								title : '一级分类映射'
 							}
 							,{

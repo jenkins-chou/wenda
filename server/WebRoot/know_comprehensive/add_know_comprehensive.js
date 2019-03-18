@@ -16,9 +16,10 @@ layui
 							return unescape(r[2]);
 						return ""; // 返回参数值
 					}
+					
 					var ctxPath = getUParam("ctx", "addjs");
 					var id = getUParam("id", "addjs");
-					
+					console.log(id);
 					// 监听提交
 					form.on('submit(add_know_comprehensive)', function(data) {
 						parent.resetSwClose(true);
@@ -30,6 +31,7 @@ layui
 							url=ctxPath+"/know_comprehensive/addKownledgeComprehensive";
 						$.getJSON(url, data.field,
 								function(data) {
+									console.log(data+"asdasdsad");
 									if (data.code == '200') {
 										parent.layer.closeAll();
 										parent.reloadList();
@@ -37,7 +39,7 @@ layui
 										layer.msg('数据保存失败', {
 											time : 1000
 										},function(){
-											alert(300)
+//											alert(300)
 										});
 										parent.resetSwClose(false);
 									}

@@ -7,6 +7,7 @@ import com.jfinal.core.Controller;
 import com.jfinal.kit.JsonKit;
 import com.jfinal.plugin.activerecord.Page;
 
+import edu.wd.model.KnowledgeComprehensiveModel;
 import edu.wd.model.PreferenceBaseModel;
 import edu.wd.util.PageJson;
 import edu.wd.util.ParamUtil;
@@ -86,7 +87,20 @@ public class PreferenceBaseController extends Controller{
 	}
 	
 	public void updatePreference(){
-		renderJson("hello");
+		try {
+			PreferenceBaseModel model = getModel(PreferenceBaseModel.class, "", true);
+			System.out.println(model.toJson());
+			model.update();
+			JSONObject js = new JSONObject();
+			js.put("code", "200");
+			renderJson(js.toJSONString());
+		} catch (Exception e) {
+			// TODO: handle exception
+			JSONObject js = new JSONObject();
+			js.put("code", 500);
+			js.put("msg", e.toString());
+			renderJson(js.toJSONString());
+		}
 	}
 	
 	public void toHtmlList(){

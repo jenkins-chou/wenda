@@ -23,10 +23,7 @@ var resetSwClose = function(isClose) {
 }
 
 var loadList = function(first) {
-	layui.config({
-				base : "js/"
-			})
-			.use([ 'form', 'layer', 'jquery', 'laypage', 'table' ],
+	layui.config({base : "js/"}).use([ 'form', 'layer', 'jquery', 'laypage', 'table' , 'upload'],
 					function() {
 						var form = layui.form, layer = layui.layer, laypage = layui.laypage, $ = layui.jquery;
 						var table = layui.table;
@@ -42,6 +39,7 @@ var loadList = function(first) {
 								return unescape(r[2]);
 							return ""; // 返回参数值
 						}
+						var upload = layui.upload;
 						var ctxPath = getUParam("ctx", "listjs");
 						// 第一个实例
 						table.render({
@@ -169,6 +167,14 @@ var loadList = function(first) {
 									content : ctxPath + "/know_comprehensive/toHtmlAdd"
 								});
 							},
+							exportdata : function() { // 获取选中数据
+								window.location.href = ctxPath + "/user/dc";
+
+							},
+							reload : function() {
+								var that = this;
+								loadList();
+							},
 							dels : function() { // 获取选中数目
 								var checkStatus = table.checkStatus('list'), data = checkStatus.data;
 								var len = data.length;
@@ -237,8 +243,7 @@ var loadList = function(first) {
 							var type = $(this).data('type');
 							active[type] ? active[type].call(this) : '';
 						});
-						
-						
+					
 						
 						// 全选
 						form.on('checkbox(allChoose)',

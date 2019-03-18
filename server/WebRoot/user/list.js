@@ -23,12 +23,7 @@ var resetSwClose = function(isClose) {
 }
 
 var loadList = function(first) {
-	layui
-			.config({
-				base : "js/"
-			})
-			.use(
-					[ 'form', 'layer', 'jquery', 'laypage', 'table', 'upload' ],
+	layui.config({base : "js/"}).use([ 'form', 'layer', 'jquery', 'laypage', 'table', 'upload' ],
 					function() {
 						var form = layui.form, layer = layui.layer, laypage = layui.laypage, $ = layui.jquery;
 						var table = layui.table;
@@ -46,6 +41,7 @@ var loadList = function(first) {
 						}
 						var upload = layui.upload;
 						var ctxPath = getUParam("ctx", "listjs");
+						
 						// 普通图片上传
 						var uploadInst = upload
 								.render({
@@ -53,7 +49,7 @@ var loadList = function(first) {
 									url : ctxPath + '/user/dr',
 									accept : 'file',
 									before : function(obj) {
-
+										alert('what?');
 									},
 									done : function(res) {
 										// 如果上传失败
@@ -214,6 +210,7 @@ var loadList = function(first) {
 
 							},
 							dc : function() { // 获取选中数据
+								alert(0);
 								window.location.href = ctxPath + "/user/dc";
 
 							},
@@ -291,8 +288,7 @@ var loadList = function(first) {
 							active[type] ? active[type].call(this) : '';
 						});
 						// 全选
-						form
-								.on(
+						form.on(
 										'checkbox(allChoose)',
 										function(data) {
 											var child = $(data.elem)

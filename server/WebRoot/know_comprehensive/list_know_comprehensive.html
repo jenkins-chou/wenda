@@ -18,21 +18,23 @@
 </head>
 <body class="childrenBody">
 	<blockquote class="layui-elem-quote news_search">
+	<div class="layui-inline">
+		<button type="button" class="layui-btn" id="test1">导入数据</button>
+		<button type="button" class="layui-btn" onclick="abc()">导出数据</button>
 		<div class="layui-inline">
 			<a class="layui-btn layui-btn-normal add" data-type="add">添加</a>
 		</div>
 		<div class="layui-inline">
 			<a class="layui-btn layui-btn-danger" data-type="dels">批量删除</a>
 		</div>
-
+	</div>
 	</blockquote>
-	
 	
 	<table id="list" lay-filter="listtable"></table>
 	
 	<!--<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
 	<script type="text/html" id="listtable-opt">
-  	   
+  	   <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
   		<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
      </script>
 	<script type="text/html" id="pic">
@@ -40,5 +42,33 @@
 	</script>
 	<script type="text/javascript" id="listjs"
 		src="${ctx}/know_comprehensive/list_know_comprehensive.js?ctx=${ctx}"></script>
+		
+	<script>
+	layui.use('upload', function(){
+		  var upload = layui.upload;
+		  
+		  //执行实例
+		  var uploadInst = upload.render({
+		    elem: '#test1' //绑定元素
+		    ,accept: 'file'
+		    ,url : '${ctx}/know_comprehensive/importData' //上传接口
+		    ,done: function(res){
+		    	alert('上传成功，请刷新数据');
+		      //上传完毕回调
+		    }
+		    ,error: function(){
+		    	alert('上传失败');
+		      //请求异常回调
+		    }
+		  });
+		});
+
+	</script>
+	<script>
+	function abc(){
+		window.location.href = "${ctx}/know_comprehensive/exportData";
+	}
+
+	</script>
 </body>
 </html>
