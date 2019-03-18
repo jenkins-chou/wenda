@@ -4307,3 +4307,21 @@ java.lang.IndexOutOfBoundsException: Index: 6, Size: 6
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
 	at java.lang.Thread.run(Unknown Source)
+
+2019-03-18 16:45:13
+[WARN]-[Thread: qtp578866604-168]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-18 16:45:13
+[WARN]-[Thread: qtp578866604-19]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-18 16:53:43
+[WARN]-[Thread: qtp578866604-24]-[org.eclipse.jetty.http.HttpParser.fill()]: HttpParser Full for SCEP@2f7bfb6b{l(/127.0.0.1:61386)<->r(/127.0.0.1:8007),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@79e337d2,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-10,l=0,c=-3},r=18} 
+
+2019-03-18 16:53:48
+[WARN]-[Thread: qtp578866604-168]-[org.eclipse.jetty.http.HttpParser.fill()]: HttpParser Full for SCEP@7e3544e5{l(/127.0.0.1:61988)<->r(/127.0.0.1:8007),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@3446eae1,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-10,l=0,c=-3},r=0} 
+
+2019-03-18 16:53:58
+[WARN]-[Thread: qtp578866604-24]-[org.eclipse.jetty.http.HttpParser.fill()]: HttpParser Full for SCEP@6575dbfa{l(/127.0.0.1:62009)<->r(/127.0.0.1:8007),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=0r}-{AsyncHttpConnection@385546ad,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-10,l=0,c=-3},r=0} 
+
+2019-03-18 16:54:24
+[WARN]-[Thread: qtp578866604-168]-[org.eclipse.jetty.http.HttpParser.fill()]: HttpParser Full for SCEP@4050bccf{l(/127.0.0.1:62060)<->r(/127.0.0.1:8007),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=0r}-{AsyncHttpConnection@6d829f96,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-10,l=0,c=-3},r=0} 
