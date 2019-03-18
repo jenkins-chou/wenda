@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 import com.jaeger.library.StatusBarUtil;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.w.wenda.activitys.SettingActivity;
 import com.w.wenda.pojo.User;
 import com.w.wenda.ui.CommonLoading;
 import com.w.wenda.util.AccountUtil;
@@ -36,10 +37,14 @@ public class UserLogin extends BaseActivity implements View.OnClickListener{
     @BindView(R.id.password)
     EditText password;
 
+    @OnClick(R.id.setting)
+    void setting(){
+        startActivity(new Intent(this,SettingActivity.class));
+    }
+
     @OnClick(R.id.login)
     void setLogin(){
         RequestParams ps = new RequestParams();
-
         ps.add("username", username.getText().toString());
         ps.add("password", password.getText().toString());
         if (StringUtil.isNotEmpty(username.getText().toString())

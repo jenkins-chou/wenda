@@ -4,6 +4,8 @@ import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
 
+import java.util.List;
+
 @Entity
 public class MessageModel {
 
@@ -15,6 +17,7 @@ public class MessageModel {
     public static final int ServerMsgUrl = 2002;
     public static final int ServerMsgImage = 2003;
     public static final int ServerMsgEmoji = 2004;
+    public static final int ServerMsgTextList = 2005;
 
 
     @Id(autoincrement = true)
@@ -26,6 +29,7 @@ public class MessageModel {
     public String webUrl;
     public String imageUrl;
     public String user_id;
+    private String messageList;
 
     public Long getId() {
         return id;
@@ -93,9 +97,10 @@ public class MessageModel {
         this.emojiUnicode = emojiUnicode;
     }
 
-    @Generated(hash = 1359317287)
+    @Generated(hash = 575841348)
     public MessageModel(Long id, int type, String code, String message,
-            int emojiUnicode, String webUrl, String imageUrl, String user_id) {
+            int emojiUnicode, String webUrl, String imageUrl, String user_id,
+            String messageList) {
         this.id = id;
         this.type = type;
         this.code = code;
@@ -104,6 +109,7 @@ public class MessageModel {
         this.webUrl = webUrl;
         this.imageUrl = imageUrl;
         this.user_id = user_id;
+        this.messageList = messageList;
     }
 
     @Generated(hash = 1699352037)
@@ -118,6 +124,14 @@ public class MessageModel {
         this.user_id = user_id;
     }
 
+    public String getMessageList() {
+        return messageList;
+    }
+
+    public void setMessageList(String messageList) {
+        this.messageList = messageList;
+    }
+
     @Override
     public String toString() {
         return "MessageModel{" +
@@ -129,6 +143,7 @@ public class MessageModel {
                 ", webUrl='" + webUrl + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", user_id='" + user_id + '\'' +
+                ", messageList=" + messageList +
                 '}';
     }
 }

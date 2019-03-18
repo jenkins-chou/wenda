@@ -9,12 +9,14 @@ public class MessageModel {
     public static final int ServerMsgUrl = 2002;
     public static final int ServerMsgImage = 2003;
     public static final int ServerMsgEmoji = 2004;
+    public static final int ServerMsgTextList = 2005;
     
     public static final String key_type = "type";
     public static final String key_message = "message";
     public static final String key_webUrl = "webUrl";
     public static final String key_imageUrl = "imageUrl";
     public static final String key_emojiUnicode = "emojiUnicode";
+    public static final String key_message_list = "messageList";
     
     public static final String answer_default = "您在说什么呢？";//默认作答内容
     public static final String answer_default_ask_again = "我不明白呢，请问可以重新说一遍吗?";//默认重新询问语句

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50723
 File Encoding         : 65001
 
-Date: 2019-03-18 15:45:12
+Date: 2019-03-18 16:55:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,7 +22,32 @@ DROP TABLE IF EXISTS `community_answer`;
 CREATE TABLE `community_answer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `question_id` varchar(255) DEFAULT NULL,
-  `answer` varchar(255) DEFAULT NULL,
+  `answer` varchar(10000) DEFAULT NULL,
+  `creator_id` varchar(255) DEFAULT NULL,
+  `creator_name` varchar(255) DEFAULT NULL,
+  `creator_avatar` varchar(255) DEFAULT NULL,
+  `useful` int(255) DEFAULT NULL,
+  `useless` int(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `create_time` varchar(255) DEFAULT NULL,
+  `del` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of community_answer
+-- ----------------------------
+INSERT INTO `community_answer` VALUES ('8', '5', '小米的互联网模式，决定了不能有库存，不能压货，重点是不能随便扩大或减少产能，\n\n订购和抢购的区别是从需求侧出发还是从供应侧出发。\n\n订购的本质是企业围着需求转，需要企业把精力投入到如何满足消费者需求，而且一旦涉及到调产能，开产线的事情，成本就上去了，价格就难以控制，一旦出现任何问题导致延期，后果嘛，你可以看看老罗的锤子一代是怎么死的。\n\n而抢购的本质在于从供给侧出发，先确定我能生产多少，或者说生产多少手性价比最高的（这个性价比是指生产多少台风险最小，陈本控制最好，比如开一条产线，刚好把高通给的芯片吃完，来两条，可能屏幕就不够了，或者后盖玻璃做不出来那么第二条线就亏了）\n\n所以，我们跟生产商谈好了，比如，一条线，一个月，50万台，这是性价比最高的生产方式。\n\n至于消费者这边，重点是，一定要让产量远小于需求，保证每一台都能卖出去，这样可以保证快速回本，然后进行下一轮抢购。\n\n所以抢购是互联网模式轻资产重营销的的必然结果，除非生产的成本已经均摊到足够低，低到可以支撑排产，库存，调配的一系列传统手段的成本。\n\n所以小米抢购不是故意耍猴，但是小米为了不崩盘，只能从生产者的角度出发，牺牲消费者的体验。', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_answer` VALUES ('9', '5', '学我者生，似我者死。\n\n手机圈模仿苹果的时间太长，导致大伙普遍存在一种错觉——苹果能做的我也能做。\n\n不知道大家有没有在电脑上卸载过QQ，大多数软件被卸载的时候，总会给你卖个萌，表示很舍不得离开，或者给个链接，让你提交卸载的原因，给点建议什么的。但QQ只会问你一句，你确认要卸载？，然后……腾讯QQ已成功卸载，没有一句多余的废话。\n\nQQ：你爱用不用！\n\n苹果：你爱买不买！\n\n朋友你要退款吗？好的，劳烦你让个道，后面拿着钞票排队的人还多着呢。\n\n雷军是一个清醒的企业家，他也承认过和苹果有很大的差距并一直努力追赶。道阻且长，急不得。\n\n', '32', '张信哲', null, '0', '0', null, null, 'normal');
+
+-- ----------------------------
+-- Table structure for community_question
+-- ----------------------------
+DROP TABLE IF EXISTS `community_question`;
+CREATE TABLE `community_question` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(1000) DEFAULT NULL,
+  `detail` varchar(10000) DEFAULT NULL,
   `creator_id` varchar(255) DEFAULT NULL,
   `creator_name` varchar(255) DEFAULT NULL,
   `creator_avatar` varchar(255) DEFAULT NULL,
@@ -35,42 +60,11 @@ CREATE TABLE `community_answer` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of community_answer
--- ----------------------------
-INSERT INTO `community_answer` VALUES ('1', '2', '哈哈哈哈', '32', '张信哲', null, '0', '0', null, null, 'normal');
-INSERT INTO `community_answer` VALUES ('2', '1', '！？？？？', '32', '张信哲', null, '0', '0', null, null, 'normal');
-INSERT INTO `community_answer` VALUES ('3', '1', '？？？', '32', '张信哲', null, '0', '0', null, null, 'normal');
-INSERT INTO `community_answer` VALUES ('4', '2', '？？？？', '32', '张信哲', null, '0', '0', null, null, 'normal');
-INSERT INTO `community_answer` VALUES ('5', '1', '年', '33', '周梅', null, '0', '0', null, null, 'normal');
-INSERT INTO `community_answer` VALUES ('6', '1', '在什么地方', '33', '周梅', null, '0', '0', null, null, 'normal');
-INSERT INTO `community_answer` VALUES ('7', '4', '没有', '33', '周梅', null, '0', '0', null, null, 'normal');
-
--- ----------------------------
--- Table structure for community_question
--- ----------------------------
-DROP TABLE IF EXISTS `community_question`;
-CREATE TABLE `community_question` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) DEFAULT NULL,
-  `detail` varchar(255) DEFAULT NULL,
-  `creator_id` varchar(255) DEFAULT NULL,
-  `creator_name` varchar(255) DEFAULT NULL,
-  `creator_avatar` varchar(255) DEFAULT NULL,
-  `useful` int(255) DEFAULT NULL,
-  `useless` int(255) DEFAULT NULL,
-  `remark` varchar(255) DEFAULT NULL,
-  `create_time` varchar(255) DEFAULT NULL,
-  `del` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-
--- ----------------------------
 -- Records of community_question
 -- ----------------------------
-INSERT INTO `community_question` VALUES ('1', '标题', '问题', '32', '张信哲', null, '0', '0', null, null, 'normal');
-INSERT INTO `community_question` VALUES ('2', '卧槽', '卧槽', '32', '张信哲', null, '0', '0', null, null, 'normal');
-INSERT INTO `community_question` VALUES ('3', '什么呀', '什么标题呀', '32', '张信哲', null, '0', '0', null, null, 'normal');
-INSERT INTO `community_question` VALUES ('4', '射雕英雄传', '你看过吗', '33', '周梅', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_question` VALUES ('5', '小米为什么不采用苹果 AirPods 那样的销售模式？', '如题 在产能无法满足现货供应的情况下，AirPods 采用的是敞开订购，6周排队时间，按顺序发货的政策，每代小米却是每隔一段时间安排一轮抢购。如果小米也改成敞开买，按顺序发货，会有哪些问题，为何不这么做？反过来说，为什么苹果对 AirPods 不采取每隔一段时间就放货抢购一次的政策？', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_question` VALUES ('6', '库克发苹果股东信称因中国市场销售不佳等原因，下调 2019 年第一财季预期，说明了哪些问题？\n', '是否是库克首次发布股东信？\n\n致苹果投资人：\n\n我们今日对苹果截至2018年12月29日的2019财年第一财季的业绩预期进行修正。我们当前预计：\n-营收约为840亿美元；\n-毛利率约为38%；\n-运营支出约为87亿美元；\n-其他利润/支出约为5.50亿美元；\n-税率约为16.5%。\n我们预计用于计算每股摊薄收益的股票数量约为47.7亿股。', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_question` VALUES ('7', '库克发苹果股东信称因中国市场销售不佳等原因，下调 2019 年第一财季预期，说明了哪些问题？\n', '是否是库克首次发布股东信？\n\n致苹果投资人：\n\n我们今日对苹果截至2018年12月29日的2019财年第一财季的业绩预期进行修正。我们当前预计：\n-营收约为840亿美元；\n-毛利率约为38%；\n-运营支出约为87亿美元；\n-其他利润/支出约为5.50亿美元；\n-税率约为16.5%。\n我们预计用于计算每股摊薄收益的股票数量约为47.7亿股。', '32', '张信哲', null, '0', '0', null, null, 'normal');
 
 -- ----------------------------
 -- Table structure for fenlei
@@ -559,7 +553,7 @@ CREATE TABLE `intelligent_answer_record` (
   `remark` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of intelligent_answer_record
@@ -589,6 +583,30 @@ INSERT INTO `intelligent_answer_record` VALUES ('22', '苹果', '综合', '文�
 INSERT INTO `intelligent_answer_record` VALUES ('23', '网址', '综合', '网址', 'http://baidu.com', '32', '', '1552809582931', '', 'normal');
 INSERT INTO `intelligent_answer_record` VALUES ('24', '爱奇艺', '综合', '网址', 'http://iqiyi.com', '32', '', '1552809594739', '', 'normal');
 INSERT INTO `intelligent_answer_record` VALUES ('25', '网址', '综合', '网址', 'http://baidu.com', '32', '', '1552809628588', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('26', 'zz', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552896112003', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('27', 'ggg', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552896238281', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('28', 'jjj', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552896523090', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('29', 'jhgg', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552896768197', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('30', 'jvgg', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552896830674', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('31', 'vvc', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552897100367', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('32', 'jhh', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552897195308', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('33', '12323255', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552897197184', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('34', 'asdsadsa', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552897207983', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('35', '苹果', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552897842301', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('36', '雪梨，苹果，水果', '综合', '文本', '你想买哪种水果', '32', '', '1552897860043', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('37', '苹果', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552897869764', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('38', '爱奇艺', '综合', '网址', 'http://iqiyi.com', '32', '', '1552897943341', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('39', '网址', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552897953365', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('40', '苹果', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552897967549', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('41', '苹果', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552897985565', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('42', '苹果', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552898004999', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('43', '雪梨，苹果，水果', '综合', '文本', '你想买哪种水果', '32', '', '1552898007300', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('44', '苹果价格', '综合', '文本', '苹果3块钱一斤', '32', '', '1552898009980', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('45', '苹果', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552898054074', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('46', '苹果价格', '综合', '文本', '苹果3块钱一斤', '32', '', '1552898059553', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('47', '网址', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552898062956', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('48', '爱奇艺网址', '综合', '网址', 'http://iqiyi.com', '32', '', '1552898064497', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('49', '猫', '综合', '图片', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', '32', '', '1552898599228', '', 'normal');
 
 -- ----------------------------
 -- Table structure for knowledge_base
@@ -645,7 +663,7 @@ INSERT INTO `knowledge_graph_comprehensive` VALUES ('9', '爱奇艺网址是什�
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('10', '猫，图片', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', '无', '综合', '图片', '无', null, 'delete');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('11', '草莓价格', '14元 / 斤', '14元 / 斤', '无', '综合', '文本', '无', null, 'normal');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('12', '雪梨，苹果，水果', '你想买哪种水果', '苹果3块钱一斤', '1', '综合', '文本', '无', null, 'normal');
-INSERT INTO `knowledge_graph_comprehensive` VALUES ('13', '苹果', '苹果3块钱一斤', '苹果3块钱一斤，您想买多少', '2', '综合', '文本', '无', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('13', '苹果价格', '苹果3块钱一斤', '苹果3块钱一斤，您想买多少', '2', '综合', '文本', '无', null, 'normal');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('14', '测试', '参考答案', '相似参考答案', '标签', '综合', '第二分类', '备注', null, 'delete');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('15', '测试', '参考答案', '相似参考答案', '标签', '综合', '第二分类', '备注', null, 'delete');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('16', '测试', '参考答案', '相似参考答案', '标签', '综合', '第二分类', '备注', null, 'normal');
@@ -778,7 +796,7 @@ INSERT INTO `knowledge_mapping` VALUES ('10', '爱奇艺网址', '综合', '网�
 INSERT INTO `knowledge_mapping` VALUES ('11', '猫', '综合', '图片', '无', null, 'normal');
 INSERT INTO `knowledge_mapping` VALUES ('12', '草莓价格', '综合', '文本', '无', null, 'normal');
 INSERT INTO `knowledge_mapping` VALUES ('13', '雪梨，苹果，水果', '综合', '文本', '1', null, 'normal');
-INSERT INTO `knowledge_mapping` VALUES ('14', '苹果', '综合', '文本', '3', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('14', '苹果价格', '综合', '文本', '3', null, 'normal');
 INSERT INTO `knowledge_mapping` VALUES ('15', '今天天气大萨达撒多', null, '文本', '无', null, 'delete');
 INSERT INTO `knowledge_mapping` VALUES ('16', '你好', '综合', '文本', '大萨达撒', null, 'delete');
 INSERT INTO `knowledge_mapping` VALUES ('17', '1', '2', '3', '4', null, 'delete');

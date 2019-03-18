@@ -32,6 +32,7 @@ public class MessageModelDao extends AbstractDao<MessageModel, Long> {
         public final static Property WebUrl = new Property(5, String.class, "webUrl", false, "WEB_URL");
         public final static Property ImageUrl = new Property(6, String.class, "imageUrl", false, "IMAGE_URL");
         public final static Property User_id = new Property(7, String.class, "user_id", false, "USER_ID");
+        public final static Property MessageList = new Property(8, String.class, "messageList", false, "MESSAGE_LIST");
     }
 
 
@@ -54,7 +55,8 @@ public class MessageModelDao extends AbstractDao<MessageModel, Long> {
                 "\"EMOJI_UNICODE\" INTEGER NOT NULL ," + // 4: emojiUnicode
                 "\"WEB_URL\" TEXT," + // 5: webUrl
                 "\"IMAGE_URL\" TEXT," + // 6: imageUrl
-                "\"USER_ID\" TEXT);"); // 7: user_id
+                "\"USER_ID\" TEXT," + // 7: user_id
+                "\"MESSAGE_LIST\" TEXT);"); // 8: messageList
     }
 
     /** Drops the underlying database table. */
@@ -98,6 +100,11 @@ public class MessageModelDao extends AbstractDao<MessageModel, Long> {
         if (user_id != null) {
             stmt.bindString(8, user_id);
         }
+ 
+        String messageList = entity.getMessageList();
+        if (messageList != null) {
+            stmt.bindString(9, messageList);
+        }
     }
 
     @Override
@@ -135,6 +142,11 @@ public class MessageModelDao extends AbstractDao<MessageModel, Long> {
         if (user_id != null) {
             stmt.bindString(8, user_id);
         }
+ 
+        String messageList = entity.getMessageList();
+        if (messageList != null) {
+            stmt.bindString(9, messageList);
+        }
     }
 
     @Override
@@ -152,7 +164,8 @@ public class MessageModelDao extends AbstractDao<MessageModel, Long> {
             cursor.getInt(offset + 4), // emojiUnicode
             cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5), // webUrl
             cursor.isNull(offset + 6) ? null : cursor.getString(offset + 6), // imageUrl
-            cursor.isNull(offset + 7) ? null : cursor.getString(offset + 7) // user_id
+            cursor.isNull(offset + 7) ? null : cursor.getString(offset + 7), // user_id
+            cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8) // messageList
         );
         return entity;
     }
@@ -167,6 +180,7 @@ public class MessageModelDao extends AbstractDao<MessageModel, Long> {
         entity.setWebUrl(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
         entity.setImageUrl(cursor.isNull(offset + 6) ? null : cursor.getString(offset + 6));
         entity.setUser_id(cursor.isNull(offset + 7) ? null : cursor.getString(offset + 7));
+        entity.setMessageList(cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8));
      }
     
     @Override

@@ -1,8 +1,6 @@
 package com.w.wenda.util;
-
-
 public class Url {
-    public static String url = "http://xxwf8r.natappfree.cc/";
+    public static String url = "http://cpe4np.natappfree.cc/";
     public static String url() {
         return url;
     }

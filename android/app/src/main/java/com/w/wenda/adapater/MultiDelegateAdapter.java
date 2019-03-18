@@ -1,6 +1,9 @@
 package com.w.wenda.adapater;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,9 +16,16 @@ import com.chad.library.adapter.base.util.MultiTypeDelegate;
 import com.w.wenda.R;
 import com.w.wenda.activitys.WebActivity;
 import com.w.wenda.model.MessageModel;
+import com.w.wenda.util.StringUtil;
+
+import java.util.Arrays;
+import java.util.List;
+
+import zuo.biao.library.util.Log;
 
 public class MultiDelegateAdapter extends BaseQuickAdapter<MessageModel, BaseViewHolder> {
 
+    private OnCallBack onCallBack;
     public MultiDelegateAdapter() {
         super(null);
         //Step.1
@@ -33,7 +43,8 @@ public class MultiDelegateAdapter extends BaseQuickAdapter<MessageModel, BaseVie
                 .registerItemType(MessageModel.ServerMsgText, R.layout.item_message_server_text_layout)
                 .registerItemType(MessageModel.ServerMsgUrl, R.layout.item_message_server_url_layout)
                 .registerItemType(MessageModel.ServerMsgImage, R.layout.item_message_server_image_layout)
-                .registerItemType(MessageModel.ServerMsgEmoji, R.layout.item_message_server_emoji_layout);
+                .registerItemType(MessageModel.ServerMsgEmoji, R.layout.item_message_server_emoji_layout)
+                .registerItemType(MessageModel.ServerMsgTextList, R.layout.item_message_server_text_list_layout);
     }
 
     @Override
@@ -72,6 +83,42 @@ public class MultiDelegateAdapter extends BaseQuickAdapter<MessageModel, BaseVie
             case MessageModel.ServerMsgEmoji:
                 helper.setText(R.id.emoji,new String(Character.toChars(entity.getEmojiUnicode())));
                 break;
+            case MessageModel.ServerMsgTextList:
+                String messageList = entity.getMessageList();
+                if (StringUtil.isNotEmpty(messageList)){
+                    String[] arr = messageList.split(",");
+                    final List<String> list = Arrays.asList(arr);
+                    if (list!=null){
+                        RecyclerView item_recyclerView = helper.getView(R.id.item_recyclerView);
+                        item_recyclerView.setLayoutManager(new StaggeredGridLayoutManager(1,1));
+
+                        BaseQuickAdapter adapterItem = new BaseQuickAdapter<String,BaseViewHolder>(R.layout.item_message_server_text_list_item,list) {
+                            @Override
+                            protected void convert(BaseViewHolder helper, String item) {
+                                helper.setText(R.id.item_text,item);
+                            }
+                        };
+                        adapterItem.setOnItemClickListener(new OnItemClickListener() {
+                            @Override
+                            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                                if (onCallBack!=null){
+                                    onCallBack.callBack(list.get(position));
+                                }
+                            }
+                        });
+
+                        item_recyclerView.setAdapter(adapterItem);
+                    }
+                }
+                break;
         }
+    }
+
+    public void setOnCallBack(OnCallBack onCallBack){
+        this.onCallBack = onCallBack;
+    }
+
+    public interface OnCallBack{
+        void callBack(String value);
     }
 }

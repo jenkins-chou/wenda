@@ -13,7 +13,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="15dp"
-            android:src="@mipmap/avatar_default" />
+            android:src="@mipmap/wd" />
 
         <TextView
             android:id="@+id/emoji"

@@ -39,7 +39,7 @@ public class AnswerController extends Controller{
 				for(KnowledgeMappingModel model:mappingModels){
 					System.out.println(model.toString());
 				}
-				if(mappingModels.size()>0){
+				if(mappingModels.size()==1){
 					String key = (String)mappingModels.get(0).get("key", "综合");//一级分类
 					String selectTable = getKnowMapTable(key);//二级分类表名
 					String input_value = (String)mappingModels.get(0).get("input_value", "");//用户输入值
@@ -47,17 +47,30 @@ public class AnswerController extends Controller{
 					
 					//二级查询、获取作答答案
 					getAnswerFromDatabase(question,key,mapping,selectTable);
+				}else if(mappingModels.size()>1){
+					String messageList = "";
+					//当匹配到多个答案时
+					for(int i =0;i<mappingModels.size();i++){
+						KnowledgeMappingModel model= mappingModels.get(i);
+						if(i==mappingModels.size()-1){
+							messageList +=model.get("input_value","");
+						}else{
+							messageList +=model.get("input_value","")+",";
+						}
+					}
+					System.out.println(messageList);
+					sendMessageToClient(MessageModel.ServerMsgTextList,"可能感兴趣的话题","","",messageList,"无匹配","无匹配");
 				}else{
 					//发送默认作答内容
-					sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","无匹配","无匹配");
+					sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","","无匹配","无匹配");
 				}
 			}else{
 				//发送默认作答内容
-				sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","无匹配","无匹配");
+				sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","","无匹配","无匹配");
 			}
 		}else{
 			//发送系统出错的默认回答
-			sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_error,"","","无匹配","无匹配");
+			sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_error,"","","","无匹配","无匹配");
 		}
 	}
 	
@@ -109,10 +122,10 @@ public class AnswerController extends Controller{
 					if(comprehensiveModels!=null&&comprehensiveModels.size()>0){
 						KnowledgeComprehensiveModel model = comprehensiveModels.get(0);
 						System.out.println(""+model.toString());
-						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),key,mapping);
+						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),"",key,mapping);
 					}else{
 						//发送默认作答内容
-						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_comprehensive,"","","无匹配","无匹配");
+						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_comprehensive,"","","","无匹配","无匹配");
 					}
 					break;
 				case KeyMapModel.key_humanity:
@@ -120,10 +133,10 @@ public class AnswerController extends Controller{
 					if(humanityModels!=null&&humanityModels.size()>0){
 						KnowledgeHumanityModel model = humanityModels.get(0);
 						System.out.println(""+model.toString());
-						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),key,mapping);
+						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),"",key,mapping);
 					}else{
 						//发送默认作答内容
-						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_humanity,"","","无匹配","无匹配");
+						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_humanity,"","","","无匹配","无匹配");
 					}
 					break;
 				case KeyMapModel.key_natural:
@@ -131,10 +144,10 @@ public class AnswerController extends Controller{
 					if(naturalModels!=null&&naturalModels.size()>0){
 						KnowledgeNaturalModel model = naturalModels.get(0);
 						System.out.println(""+model.toString());
-						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),key,mapping);
+						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),"",key,mapping);
 					}else{
 						//发送默认作答内容
-						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_natural,"","","无匹配","无匹配");
+						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_natural,"","","","无匹配","无匹配");
 					}
 					break;
 				case KeyMapModel.key_society:
@@ -142,10 +155,10 @@ public class AnswerController extends Controller{
 					if(societyModels!=null&&societyModels.size()>0){
 						KnowledgeSocietyModel model = societyModels.get(0);
 						System.out.println(""+model.toString());
-						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),key,mapping);
+						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),"",key,mapping);
 					}else{
 						//发送默认作答内容
-						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_society,"","","无匹配","无匹配");
+						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_society,"","","","无匹配","无匹配");
 					}
 					break;
 				case KeyMapModel.key_history:
@@ -153,10 +166,10 @@ public class AnswerController extends Controller{
 					if(historyModels!=null&&historyModels.size()>0){
 						KnowledgeHistoryModel model = historyModels.get(0);
 						System.out.println(""+model.toString());
-						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),key,mapping);
+						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),"",key,mapping);
 					}else{
 						//发送默认作答内容
-						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_history,"","","无匹配","无匹配");
+						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_history,"","","","无匹配","无匹配");
 					}
 					break;
 					default:
@@ -164,15 +177,15 @@ public class AnswerController extends Controller{
 						if(defaultModels!=null&&defaultModels.size()>0){
 							KnowledgeComprehensiveModel model = defaultModels.get(0);
 							System.out.println(""+model.toString());
-							sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),key,mapping);
+							sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),"",key,mapping);
 						}else{
 							//发送默认作答内容
-							sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","无匹配","无匹配");
+							sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","","无匹配","无匹配");
 						}
 						break;
 			}
 		}else{
-			sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","无匹配","无匹配");
+			sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","","无匹配","无匹配");
 		}
 	}
 	
@@ -199,7 +212,7 @@ public class AnswerController extends Controller{
 	}
 	
 	//返回答案至客户端
-	public void sendMessageToClient(int msgType,String message,String imageUrl,String httpUrl,String key_record,String mapping_record){
+	public void sendMessageToClient(int msgType,String message,String imageUrl,String httpUrl,String messageList,String key_record,String mapping_record){
 		JSONObject js = new JSONObject();
 		js.put("code", "200");
 		js.put("message", message);
@@ -221,9 +234,13 @@ public class AnswerController extends Controller{
 			//表情类型
 			case MessageModel.ServerMsgEmoji:
 				break;
-				default:
-					js.put(MessageModel.key_type, MessageModel.MineMsgText);//设置消息类型
-					break;
+			case MessageModel.ServerMsgTextList:
+				js.put(MessageModel.key_type, msgType);
+				js.put(MessageModel.key_message_list, messageList);
+				break;
+			default:
+				js.put(MessageModel.key_type, MessageModel.MineMsgText);//设置消息类型
+			break;
 		}
 		renderJson(js.toJSONString());
 		

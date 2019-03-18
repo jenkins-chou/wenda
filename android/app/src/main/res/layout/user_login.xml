@@ -35,7 +35,17 @@
                 android:textColor="@color/white"
                 android:textSize="15sp" />
         </LinearLayout>
-
+        <TextView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:text="设置"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
