@@ -33,7 +33,7 @@ public class KnowHistoryController extends Controller{
 			.set("answer", readAll.get(i).get(1).toString())
 			.set("probably_answer", readAll.get(i).get(2).toString())
 			.set("label", readAll.get(i).get(3).toString())
-			.set("first_classification","历史")
+			.set("first_classification","外贸")
 			.set("second_classification", readAll.get(i).get(5).toString())
 			.set("remark", readAll.get(i).get(6).toString())
 			.set("del","normal")
@@ -63,7 +63,7 @@ public class KnowHistoryController extends Controller{
 					ulist.get(i).getStr("del"));
 			rows.add(l);
 		}
-		ExcelWriter writer = ExcelUtil.getWriter("d:/" + "历史类问答题库" + ".xls");
+		ExcelWriter writer = ExcelUtil.getWriter("d:/" + "外贸类问答题库" + ".xls");
 		// 通过构造方法创建writer
 		// ExcelWriter writer = new ExcelWriter("d:/writeTest.xls");
 
@@ -75,7 +75,7 @@ public class KnowHistoryController extends Controller{
 		writer.write(rows);
 		// 关闭writer，释放内存
 		writer.close();
-		renderFile(new File("d:/" + "历史类问答题库" + ".xls"));
+		renderFile(new File("d:/" + "外贸类问答题库" + ".xls"));
 	}
 	
 	public void getAllKownledgeHistory(){

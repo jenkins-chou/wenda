@@ -22,10 +22,10 @@ public class MessageModel {
     public static final String answer_default_ask_again = "我不明白呢，请问可以重新说一遍吗?";//默认重新询问语句
     
     public static final String answer_default_comprehensive = "很抱歉，我不太理解呢，请问可以重新说一遍吗?";//默认重新询问语句
-    public static final String answer_default_humanity = "很抱歉，这个人文尝试我不太理解呢，请问可以重新说一遍吗?";//默认重新询问语句
-    public static final String answer_default_society = "很抱歉，这个社会问题我不太理解呢，请问可以重新说一遍吗?";//默认重新询问语句
-    public static final String answer_default_history= "很抱歉，这个历史问题我不太理解呢，请问可以重新说一遍吗?";//默认重新询问语句
-    public static final String answer_default_natural = "很抱歉，这个自然问题我不太理解呢，请问可以重新说一遍吗?";//默认重新询问语句
+    public static final String answer_default_humanity = "很抱歉，这个我不太理解呢，请问可以重新说一遍吗?";//默认重新询问语句
+    public static final String answer_default_society = "很抱歉，这个不太理解呢，请问可以重新说一遍吗?";//默认重新询问语句
+    public static final String answer_default_history= "很抱歉，这个我不太理解呢，请问可以重新说一遍吗?";//默认重新询问语句
+    public static final String answer_default_natural = "很抱歉，这个我不太理解呢，请问可以重新说一遍吗?";//默认重新询问语句
     
     public static final String answer_error = "系统出错啦 -_-";//系统出错作答内容
     
