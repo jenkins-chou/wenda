@@ -1,32 +1,21 @@
 package edu.wd.config;
 
 import java.sql.DriverManager;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
+import org.ansj.domain.Result;
+import org.ansj.splitWord.analysis.ToAnalysis;
+
+import com.jfinal.template.expr.ast.Array;
 import com.mysql.jdbc.Connection;
 
 public class Test {
 	public Test(){
 		
 	}
-		
-	public static void main(String args[])
-	{
-		
-			String url = "jdbc:mysql://localhost/mysql";
-			String driver = "com.mysql.jdbc.Driver";
-			try{
-				Class.forName(driver);
-			}catch(Exception e){
-				System.out.println("无法加载驱动");
-			}
-			
-	try {
-			Connection con = (Connection) DriverManager.getConnection(url,"root","root");
-			if(!con.isClosed())
-				System.out.println("success");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	
+	
+	
 }

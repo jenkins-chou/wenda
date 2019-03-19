@@ -4326,6 +4326,7 @@ java.lang.IndexOutOfBoundsException: Index: 6, Size: 6
 2019-03-18 16:54:24
 [WARN]-[Thread: qtp578866604-168]-[org.eclipse.jetty.http.HttpParser.fill()]: HttpParser Full for SCEP@4050bccf{l(/127.0.0.1:62060)<->r(/127.0.0.1:8007),d=true,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=0r}-{AsyncHttpConnection@6d829f96,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-10,l=0,c=-3},r=0} 
 
+<<<<<<< HEAD
 2019-03-18 19:23:22
 [ERROR]-[Thread: qtp353842779-28]-[com.jfinal.core.ActionHandler.handle()]: /know_statistics/getData
 java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
@@ -4533,3 +4534,148 @@ Caused by: java.lang.reflect.InvocationTargetException
 Caused by: java.lang.NoClassDefFoundError: edu/wd/knowledge/controller/AnswerStatisticsController$Classify
 	at edu.wd.knowledge.controller.AnswerStatisticsController.getData(AnswerStatisticsController.java:30)
 	... 30 more
+=======
+2019-03-19 08:45:01
+[WARN]-[Thread: main]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 08:45:01
+[ERROR]-[Thread: main]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 08:45:01
+[ERROR]-[Thread: main]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 08:50:08
+[WARN]-[Thread: main]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 08:50:08
+[ERROR]-[Thread: main]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 08:50:08
+[ERROR]-[Thread: main]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 08:54:19
+[WARN]-[Thread: main]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 08:54:19
+[ERROR]-[Thread: main]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 08:54:19
+[ERROR]-[Thread: main]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 09:04:24
+[WARN]-[Thread: main]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 09:04:24
+[ERROR]-[Thread: main]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 09:04:24
+[ERROR]-[Thread: main]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 09:17:40
+[WARN]-[Thread: main]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 09:17:40
+[ERROR]-[Thread: main]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 09:17:40
+[ERROR]-[Thread: main]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 09:17:55
+[WARN]-[Thread: main]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 09:17:55
+[ERROR]-[Thread: main]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 09:17:55
+[ERROR]-[Thread: main]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 09:50:59
+[WARN]-[Thread: qtp578866604-18]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 09:50:59
+[ERROR]-[Thread: qtp578866604-18]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 09:50:59
+[ERROR]-[Thread: qtp578866604-18]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 09:52:22
+[WARN]-[Thread: qtp578866604-18]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 09:52:22
+[ERROR]-[Thread: qtp578866604-18]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 09:52:22
+[ERROR]-[Thread: qtp578866604-18]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 09:54:19
+[WARN]-[Thread: qtp578866604-23]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 09:54:19
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 09:54:19
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 09:55:15
+[WARN]-[Thread: qtp578866604-23]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 09:55:15
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 09:55:15
+[ERROR]-[Thread: qtp578866604-23]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 09:57:18
+[WARN]-[Thread: qtp578866604-20]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 09:57:18
+[ERROR]-[Thread: qtp578866604-20]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 09:57:18
+[ERROR]-[Thread: qtp578866604-20]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 10:01:55
+[WARN]-[Thread: qtp578866604-21]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 10:01:55
+[ERROR]-[Thread: qtp578866604-21]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 10:01:55
+[ERROR]-[Thread: qtp578866604-21]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 10:02:53
+[WARN]-[Thread: qtp578866604-22]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 10:02:53
+[ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 10:02:53
+[ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 10:05:07
+[WARN]-[Thread: qtp578866604-21]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 10:05:07
+[ERROR]-[Thread: qtp578866604-21]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 10:05:07
+[ERROR]-[Thread: qtp578866604-21]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 10:15:24
+[WARN]-[Thread: qtp578866604-22]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 10:15:24
+[ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 10:15:24
+[ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 10:26:34
+[WARN]-[Thread: qtp578866604-22]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 10:26:34
+[ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 10:26:34
+[ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+>>>>>>> 89eef1eaff7cf70df256d629543517d0deb01acb

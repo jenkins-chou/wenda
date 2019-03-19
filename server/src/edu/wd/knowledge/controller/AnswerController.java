@@ -1,7 +1,11 @@
 package edu.wd.knowledge.controller;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
+import org.ansj.domain.Result;
 import org.ansj.splitWord.analysis.ToAnalysis;
 import org.eclipse.jetty.util.log.Log;
 
@@ -29,18 +33,17 @@ public class AnswerController extends Controller{
 		user_id = getPara("user_id");
 		String question_type = getPara("question_type");
 		question = getPara("question");
-		if(question_type != null && question_type.endsWith("")){
-			
-//			splitMessage(question);
+		if(question != null && !question.equals("")){
 			
 			List<KnowledgeMappingModel> mappingModels = KnowledgeMappingModel.dao.find("select * from knowledge_mapping where input_value like '%"+question+"%'");
 			if(mappingModels!=null){
+				log("mappingModels not null");
 				//打印一级问题分类
 				for(KnowledgeMappingModel model:mappingModels){
 					System.out.println(model.toString());
 				}
 				if(mappingModels.size()==1){
-					String key = (String)mappingModels.get(0).get("key", "综合");//一级分类
+					String key = (String)mappingModels.get(0).get("key_first", "综合");//一级分类
 					String selectTable = getKnowMapTable(key);//二级分类表名
 					String input_value = (String)mappingModels.get(0).get("input_value", "");//用户输入值
 					String mapping = (String)mappingModels.get(0).get("mapping", "文本");//二级分类
@@ -61,10 +64,11 @@ public class AnswerController extends Controller{
 					System.out.println(messageList);
 					sendMessageToClient(MessageModel.ServerMsgTextList,"可能感兴趣的话题","","",messageList,"无匹配","无匹配");
 				}else{
-					//发送默认作答内容
-					sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","","无匹配","无匹配");
+					//联想作答
+					getProbablyAnswer();
 				}
 			}else{
+				
 				//发送默认作答内容
 				sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","","无匹配","无匹配");
 			}
@@ -74,9 +78,21 @@ public class AnswerController extends Controller{
 		}
 	}
 	
-	//分割文本，进行富文本处理
-	public void splitMessage(String msg){
-	    System.out.println(ToAnalysis.parse(msg));
+	/**
+	 * 分割文本，去掉字符串中的字母和 斜杠/
+	 * @return List
+	 */
+	public List<String> getSplitString(String str){
+		List<String> data = new ArrayList();
+		if(str!=null&&!str.equals("")){
+			Result result = ToAnalysis.parse(str);
+			if(result!=null){
+				String temp = result.toString().replaceAll("[a-zA-Z]","" ).replaceAll("/", "");
+				String[] sourceArray = temp.split(",");
+				data = Arrays.asList(sourceArray);
+			}
+		}
+		return data;
 	}
 	
 	
@@ -88,9 +104,6 @@ public class AnswerController extends Controller{
 			switch(mappingKey){
 				case KeyMapModel.key_comprehensive:
 					result = KeyMapModel.map_comprehensive;
-					break;
-				case KeyMapModel.key_humanity:
-					result = KeyMapModel.map_humanity;
 					break;
 				case KeyMapModel.key_natural:
 					result = KeyMapModel.map_natural;
@@ -126,17 +139,6 @@ public class AnswerController extends Controller{
 					}else{
 						//发送默认作答内容
 						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_comprehensive,"","","","无匹配","无匹配");
-					}
-					break;
-				case KeyMapModel.key_humanity:
-					List<KnowledgeHumanityModel> humanityModels = KnowledgeHumanityModel.dao.find(sql);
-					if(humanityModels!=null&&humanityModels.size()>0){
-						KnowledgeHumanityModel model = humanityModels.get(0);
-						System.out.println(""+model.toString());
-						sendMessageToClient(changeMappingToCN(mapping),(String)model.get("answer",MessageModel.answer_default_ask_again),(String)model.get("answer", ""),(String)model.get("answer", ""),"",key,mapping);
-					}else{
-						//发送默认作答内容
-						sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default_humanity,"","","","无匹配","无匹配");
 					}
 					break;
 				case KeyMapModel.key_natural:
@@ -185,6 +187,51 @@ public class AnswerController extends Controller{
 						break;
 			}
 		}else{
+			sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","","无匹配","无匹配");
+		}
+	}
+	
+	//词汇联想作答
+	void getProbablyAnswer(){
+		List<String> list = getSplitString(question);
+		String sql_and = "select * from knowledge_mapping where ";
+		String sql_or = "select * from knowledge_mapping where ";
+		if(list!=null&&list.size()>0){
+			for(int i = 0;i<list.size();i++){
+				if(i==list.size()-1){
+					sql_and += " input_value like '%"+list.get(i)+"%'";
+					sql_or += " input_value like '%"+list.get(i)+"%'";
+				}else{
+					sql_and += " input_value like '%"+list.get(i)+"%' and ";
+					sql_or += " input_value like '%"+list.get(i)+"%' or ";
+				}
+			}
+		}
+		log(sql_and);
+		List<KnowledgeMappingModel> mappingModelAnd = KnowledgeMappingModel.dao.find(sql_and);
+		List<KnowledgeMappingModel> mappingModelOr = KnowledgeMappingModel.dao.find(sql_or);
+		if(mappingModelAnd!=null&&mappingModelOr!=null){
+			mappingModelAnd.addAll(mappingModelOr);
+			log(mappingModelAnd.toString());
+			if(mappingModelAnd.size()>=1){
+				String messageList = "";
+				//当匹配到多个答案时
+				for(int i =0;i<mappingModelAnd.size();i++){
+					KnowledgeMappingModel model= mappingModelAnd.get(i);
+					if(i==mappingModelAnd.size()-1){
+						messageList +=model.get("input_value","");
+					}else{
+						messageList +=model.get("input_value","")+",";
+					}
+				}
+				System.out.println(messageList);
+				sendMessageToClient(MessageModel.ServerMsgTextList,"可能感兴趣的话题","","",messageList,"无匹配","无匹配");
+			}else{
+				//发送默认作答内容
+				sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","","无匹配","无匹配");
+			}
+		}else{
+			//发送默认作答内容
 			sendMessageToClient(MessageModel.ServerMsgText,MessageModel.answer_default,"","","","无匹配","无匹配");
 		}
 	}
@@ -264,6 +311,11 @@ public class AnswerController extends Controller{
 		model.set("del", "normal");//备注
 		System.out.println(model);
 		model.save();
+	}
+	
+	
+	void log(String log){
+		System.out.println("---------[ "+log+" ]"+new Date().toString());
 	}
 
 }
