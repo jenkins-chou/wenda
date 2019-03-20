@@ -4469,3 +4469,56 @@ java.lang.IndexOutOfBoundsException: Index: 6, Size: 6
 
 2019-03-19 10:26:34
 [ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 10:30:22
+[WARN]-[Thread: qtp578866604-22]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 10:30:22
+[ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:F:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 10:30:22
+[ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 10:33:31
+[ERROR]-[Thread: qtp578866604-21]-[com.jfinal.core.ActionHandler.handle()]: /manager/login
+java.lang.NullPointerException
+	at edu.wd.pojo.managerController.login(managerController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:78)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Unknown Source)
+
+2019-03-19 10:38:43
+[WARN]-[Thread: qtp578866604-22]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-19 10:38:43
+[WARN]-[Thread: qtp578866604-20]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-19 13:07:52
+[WARN]-[Thread: qtp578866604-17 Selector0]-[org.eclipse.jetty.io.nio.SelectorManager$SelectSet.doSelect()]: Selector org.eclipse.jetty.io.nio.SelectorManager$SelectSet@edc5147 keys=0 selected=0 is too busy, pausing!
