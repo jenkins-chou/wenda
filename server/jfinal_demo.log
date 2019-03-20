@@ -4679,3 +4679,39 @@ Caused by: java.lang.NoClassDefFoundError: edu/wd/knowledge/controller/AnswerSta
 2019-03-19 10:26:34
 [ERROR]-[Thread: qtp578866604-22]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:F:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
 >>>>>>> 89eef1eaff7cf70df256d629543517d0deb01acb
+
+2019-03-19 20:50:37
+[WARN]-[Thread: qtp353842779-29]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 20:50:37
+[ERROR]-[Thread: qtp353842779-29]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:G:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 20:50:37
+[ERROR]-[Thread: qtp353842779-29]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:G:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 21:24:20
+[WARN]-[Thread: qtp353842779-33]-[org.ansj.util.MyStaticValue.<clinit>()]: not find library.properties in classpath use it by default !
+
+2019-03-19 21:24:20
+[ERROR]-[Thread: qtp353842779-33]-[org.ansj.library.AmbiguityLibrary.init()]: Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:G:\1SUPER\wenda\server\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+
+2019-03-19 21:24:20
+[ERROR]-[Thread: qtp353842779-33]-[org.ansj.library.DicLibrary.init()]: Init dic library error :org.ansj.exception.LibraryException:  path :library/default.dic file:G:\1SUPER\wenda\server\library\default.dic not found or can not to read, path: library/default.dic
+
+2019-03-19 21:24:50
+[WARN]-[Thread: qtp353842779-33]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-19 21:24:50
+[WARN]-[Thread: qtp353842779-29]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-19 21:26:18
+[WARN]-[Thread: qtp353842779-29]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-19 21:26:18
+[WARN]-[Thread: qtp353842779-33]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-19 21:26:21
+[WARN]-[Thread: qtp353842779-33]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
+
+2019-03-19 21:26:21
+[WARN]-[Thread: qtp353842779-29]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload/null
