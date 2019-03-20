@@ -26,7 +26,7 @@ layui
 						layer.msg('正在保存。。。', {time : 1000},function(){});
 						var url="";
 						if(id!=null&&id!='')
-							url=ctxPath+"/fenlei/updates";
+							url=ctxPath+"/fenlei/update";
 						else
 							url=ctxPath+"/fenlei/add";
 						$.getJSON(url, data.field,

@@ -28,6 +28,7 @@ public class AnswerController extends Controller{
 	private String user_id;
 	private String question;
 	
+	//app获取答案接口
 	public void getAnswer(){
 		
 		user_id = getPara("user_id");
@@ -258,7 +259,7 @@ public class AnswerController extends Controller{
 		return result;
 	}
 	
-	//返回答案至客户端
+	//发送答案至客户端
 	public void sendMessageToClient(int msgType,String message,String imageUrl,String httpUrl,String messageList,String key_record,String mapping_record){
 		JSONObject js = new JSONObject();
 		js.put("code", "200");
@@ -313,7 +314,7 @@ public class AnswerController extends Controller{
 		model.save();
 	}
 	
-	
+	//打印日志
 	void log(String log){
 		System.out.println("---------[ "+log+" ]"+new Date().toString());
 	}

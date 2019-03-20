@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 用呗云借通APP日志
-Source Server Version : 50723
+Source Server         : manager
+Source Server Version : 50725
 Source Host           : localhost:3306
 Source Database       : wenda
 
 Target Server Type    : MYSQL
-Target Server Version : 50723
+Target Server Version : 50725
 File Encoding         : 65001
 
-Date: 2019-03-18 16:55:06
+Date: 2019-03-20 19:28:17
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,13 +32,14 @@ CREATE TABLE `community_answer` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of community_answer
 -- ----------------------------
 INSERT INTO `community_answer` VALUES ('8', '5', '小米的互联网模式，决定了不能有库存，不能压货，重点是不能随便扩大或减少产能，\n\n订购和抢购的区别是从需求侧出发还是从供应侧出发。\n\n订购的本质是企业围着需求转，需要企业把精力投入到如何满足消费者需求，而且一旦涉及到调产能，开产线的事情，成本就上去了，价格就难以控制，一旦出现任何问题导致延期，后果嘛，你可以看看老罗的锤子一代是怎么死的。\n\n而抢购的本质在于从供给侧出发，先确定我能生产多少，或者说生产多少手性价比最高的（这个性价比是指生产多少台风险最小，陈本控制最好，比如开一条产线，刚好把高通给的芯片吃完，来两条，可能屏幕就不够了，或者后盖玻璃做不出来那么第二条线就亏了）\n\n所以，我们跟生产商谈好了，比如，一条线，一个月，50万台，这是性价比最高的生产方式。\n\n至于消费者这边，重点是，一定要让产量远小于需求，保证每一台都能卖出去，这样可以保证快速回本，然后进行下一轮抢购。\n\n所以抢购是互联网模式轻资产重营销的的必然结果，除非生产的成本已经均摊到足够低，低到可以支撑排产，库存，调配的一系列传统手段的成本。\n\n所以小米抢购不是故意耍猴，但是小米为了不崩盘，只能从生产者的角度出发，牺牲消费者的体验。', '32', '张信哲', null, '0', '0', null, null, 'normal');
 INSERT INTO `community_answer` VALUES ('9', '5', '学我者生，似我者死。\n\n手机圈模仿苹果的时间太长，导致大伙普遍存在一种错觉——苹果能做的我也能做。\n\n不知道大家有没有在电脑上卸载过QQ，大多数软件被卸载的时候，总会给你卖个萌，表示很舍不得离开，或者给个链接，让你提交卸载的原因，给点建议什么的。但QQ只会问你一句，你确认要卸载？，然后……腾讯QQ已成功卸载，没有一句多余的废话。\n\nQQ：你爱用不用！\n\n苹果：你爱买不买！\n\n朋友你要退款吗？好的，劳烦你让个道，后面拿着钞票排队的人还多着呢。\n\n雷军是一个清醒的企业家，他也承认过和苹果有很大的差距并一直努力追赶。道阻且长，急不得。\n\n', '32', '张信哲', null, '0', '0', null, null, 'normal');
+INSERT INTO `community_answer` VALUES ('10', '5', '一般般', '32', '张信哲', null, '0', '0', null, null, 'normal');
 
 -- ----------------------------
 -- Table structure for community_question
@@ -87,12 +88,7 @@ INSERT INTO `fenlei` VALUES ('17', '快递');
 INSERT INTO `fenlei` VALUES ('18', '零食');
 INSERT INTO `fenlei` VALUES ('19', '时间');
 INSERT INTO `fenlei` VALUES ('22', '售后');
-INSERT INTO `fenlei` VALUES ('24', '测试测试');
-INSERT INTO `fenlei` VALUES ('25', null);
-INSERT INTO `fenlei` VALUES ('26', null);
-INSERT INTO `fenlei` VALUES ('27', null);
-INSERT INTO `fenlei` VALUES ('28', null);
-INSERT INTO `fenlei` VALUES ('29', null);
+INSERT INTO `fenlei` VALUES ('24', '测试');
 
 -- ----------------------------
 -- Table structure for his
@@ -553,7 +549,7 @@ CREATE TABLE `intelligent_answer_record` (
   `remark` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of intelligent_answer_record
@@ -607,6 +603,51 @@ INSERT INTO `intelligent_answer_record` VALUES ('46', '苹果价格', '综合', 
 INSERT INTO `intelligent_answer_record` VALUES ('47', '网址', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552898062956', '', 'normal');
 INSERT INTO `intelligent_answer_record` VALUES ('48', '爱奇艺网址', '综合', '网址', 'http://iqiyi.com', '32', '', '1552898064497', '', 'normal');
 INSERT INTO `intelligent_answer_record` VALUES ('49', '猫', '综合', '图片', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', '32', '', '1552898599228', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('50', '苹果', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552919247415', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('51', '水果', '综合', '文本', '你想买哪种水果', '32', '', '1552919264927', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('52', '雪梨', '综合', '文本', '你想买哪种水果', '32', '', '1552919270477', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('53', '雪梨价格', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552919280971', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('54', '价格', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552919286105', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('55', '草莓', '综合', '文本', '14元 / 斤', '32', '', '1552919297042', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('56', '图片', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552919317424', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('57', '网址', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552919322648', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('58', '百度', '综合', '网址', 'http://baidu.com', '32', '', '1552919325865', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('59', '百度', '综合', '网址', 'http://baidu.com', '32', '', '1552919360064', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('60', '苹果的价格', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552919382537', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('61', '苹果', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552919396300', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('62', '价格', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552919399579', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('63', '苹果价格', '综合', '文本', '苹果3块钱一斤', '32', '', '1552919404524', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('64', '苹果的价格', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552919409808', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('65', '苹果的价格', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552919446548', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('66', '苹果价格多少', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552919616382', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('67', '苹果价格多少', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1552919628607', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('68', '苹果', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552919846884', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('69', '价格', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552919850264', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('70', '苹果价格', '综合', '文本', '苹果3块钱一斤', '32', '', '1552919855074', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('71', '水果', '综合', '文本', '你想买哪种水果', '32', '', '1552919967507', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('72', '苹果', '综合', '文本', '苹果3块钱一斤', '32', '', '1552919970752', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('73', '价格', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552999827872', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('74', '苹果的价格', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552999838440', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('75', '苹果的价格', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552999846914', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('76', '苹果的价格多少', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1552999864449', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('77', '水果', '综合', '文本', '你想买哪种水果', '32', '', '1552999998325', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('78', '雪梨', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1553000004576', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('79', '苹果', '综合', '文本', '苹果3块钱一斤', '32', '', '1553000009167', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('80', '衣服', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1553000024274', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('81', '衣服多少钱', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1553000032772', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('82', '衣服', '无匹配', '无匹配', '您在说什么呢？', '32', '', '1553000082534', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('83', '衣服', '综合', '文本', '我这里的衣服有50，100，200等等不同价格的', '32', '', '1553000143243', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('84', '多少', '综合', '文本', '我这里的衣服有50，100，200等等不同价格的', '32', '', '1553000222053', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('85', '钱', '综合', '文本', '我这里的衣服有50，100，200等等不同价格的', '32', '', '1553000225492', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('86', '苹果价格', '综合', '文本', '苹果3块钱一斤', '32', '', '1553000244885', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('87', '苹果价格', '综合', '文本', '苹果3块钱一斤', '32', '', '1553000304783', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('88', 'hi', '综合', '文本', 'hello，有什么可以帮到您', '32', '', '1553000665030', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('89', 'Hello', '综合', '文本', 'hello，有什么可以帮到您', '32', '', '1553000687714', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('90', 'hi', '综合', '文本', 'hello，有什么可以帮到您', '32', '', '1553000695369', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('91', 'hh', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1553001861282', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('92', '今天天气', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1553001868965', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('93', '你好', '无匹配', '无匹配', '可能感兴趣的话题', '32', '', '1553001871469', '', 'normal');
+INSERT INTO `intelligent_answer_record` VALUES ('94', '草莓价格', '综合', '文本', '14元 / 斤', '32', '', '1553001874681', '', 'normal');
 
 -- ----------------------------
 -- Table structure for knowledge_base
@@ -662,11 +703,11 @@ INSERT INTO `knowledge_graph_comprehensive` VALUES ('8', 'hello,hi', 'hello，�
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('9', '爱奇艺网址是什么，爱奇艺，爱奇艺', 'http://iqiyi.com', 'http://iqiyi.com', '无', '综合', '网址', '无', null, 'normal');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('10', '猫，图片', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552652546868&di=182fdca9adacd6c9c24d18216f854cac&imgtype=0&src=http%3A%2F%2Fwww.pig66.com%2Fuploadfile%2F2018%2F0129%2F20180129054219130.png', '无', '综合', '图片', '无', null, 'delete');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('11', '草莓价格', '14元 / 斤', '14元 / 斤', '无', '综合', '文本', '无', null, 'normal');
-INSERT INTO `knowledge_graph_comprehensive` VALUES ('12', '雪梨，苹果，水果', '你想买哪种水果', '苹果3块钱一斤', '1', '综合', '文本', '无', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('12', '水果', '你想买哪种水果', '苹果3块钱一斤', '1', '综合', '文本', '无', null, 'normal');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('13', '苹果价格', '苹果3块钱一斤', '苹果3块钱一斤，您想买多少', '2', '综合', '文本', '无', null, 'normal');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('14', '测试', '参考答案', '相似参考答案', '标签', '综合', '第二分类', '备注', null, 'delete');
 INSERT INTO `knowledge_graph_comprehensive` VALUES ('15', '测试', '参考答案', '相似参考答案', '标签', '综合', '第二分类', '备注', null, 'delete');
-INSERT INTO `knowledge_graph_comprehensive` VALUES ('16', '测试', '参考答案', '相似参考答案', '标签', '综合', '第二分类', '备注', null, 'normal');
+INSERT INTO `knowledge_graph_comprehensive` VALUES ('16', '衣服多少钱', '我这里的衣服有50，100，200等等不同价格的', '相似参考答案', '标签', '综合', '文本', '备注', null, 'normal');
 
 -- ----------------------------
 -- Table structure for knowledge_graph_history
@@ -684,7 +725,7 @@ CREATE TABLE `knowledge_graph_history` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_graph_history
@@ -692,6 +733,9 @@ CREATE TABLE `knowledge_graph_history` (
 INSERT INTO `knowledge_graph_history` VALUES ('1', '历史', '参考答案2', '相似参考答案', '标签', '一级类别', '图片', '备注', null, 'delete');
 INSERT INTO `knowledge_graph_history` VALUES ('2', '去年草莓的均价', '15元 / 斤', '相似参考答案', '标签', '历史', '文本', '备注', null, 'normal');
 INSERT INTO `knowledge_graph_history` VALUES ('3', '测试', '参考答案', '相似参考答案', '标签', '历史', '第二分类', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_history` VALUES ('4', '历史', '参考答案2', '相似参考答案', '标签', '历史', '图片', '备注', null, 'delete');
+INSERT INTO `knowledge_graph_history` VALUES ('5', '去年草莓的均价', '15元 / 斤', '相似参考答案', '标签', '历史', '文本', '备注', null, 'normal');
+INSERT INTO `knowledge_graph_history` VALUES ('6', '衣服多少钱', '我这里的衣服有50，100，200等等不同价格的', '相似参考答案', '标签', '历史', '文本', '备注', null, 'normal');
 
 -- ----------------------------
 -- Table structure for knowledge_graph_humanity
@@ -779,7 +823,7 @@ CREATE TABLE `knowledge_mapping` (
   `create_time` varchar(255) DEFAULT NULL,
   `del` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of knowledge_mapping
@@ -795,11 +839,12 @@ INSERT INTO `knowledge_mapping` VALUES ('9', '阿斯顿撒多撒', '综合', '�
 INSERT INTO `knowledge_mapping` VALUES ('10', '爱奇艺网址', '综合', '网址', '无', null, 'normal');
 INSERT INTO `knowledge_mapping` VALUES ('11', '猫', '综合', '图片', '无', null, 'normal');
 INSERT INTO `knowledge_mapping` VALUES ('12', '草莓价格', '综合', '文本', '无', null, 'normal');
-INSERT INTO `knowledge_mapping` VALUES ('13', '雪梨，苹果，水果', '综合', '文本', '1', null, 'normal');
+INSERT INTO `knowledge_mapping` VALUES ('13', '水果', '综合', '文本', '1', null, 'normal');
 INSERT INTO `knowledge_mapping` VALUES ('14', '苹果价格', '综合', '文本', '3', null, 'normal');
 INSERT INTO `knowledge_mapping` VALUES ('15', '今天天气大萨达撒多', null, '文本', '无', null, 'delete');
 INSERT INTO `knowledge_mapping` VALUES ('16', '你好', '综合', '文本', '大萨达撒', null, 'delete');
 INSERT INTO `knowledge_mapping` VALUES ('17', '1', '2', '3', '4', null, 'delete');
+INSERT INTO `knowledge_mapping` VALUES ('18', '衣服多少钱', '综合', '文本', '2', null, 'normal');
 
 -- ----------------------------
 -- Table structure for manager
@@ -823,7 +868,6 @@ INSERT INTO `manager` VALUES ('6', '123321', '123321', '张小小', '1324354564'
 INSERT INTO `manager` VALUES ('7', '5555', '5555', '李圣杰', '13243344356', '超级管理员');
 INSERT INTO `manager` VALUES ('8', '2345', '2345', '陈坤', '1345345876', '普通管理员');
 INSERT INTO `manager` VALUES ('9', '77777', '77777', '陈俊杰', '13454567899', '超级管理员');
-INSERT INTO `manager` VALUES ('10', '123456', '123456', '小薇', '13458786547', '超级管理员');
 
 -- ----------------------------
 -- Table structure for preference_base
@@ -893,7 +937,6 @@ INSERT INTO `question` VALUES ('14', '如果是外省的话，要多少天到  '
 INSERT INTO `question` VALUES ('15', '你这里有雪梨买吗？什么价格？', '有的亲，我这里的雪梨是3块钱一斤的', '雪梨#买#价格', '其他');
 INSERT INTO `question` VALUES ('16', '我想买健身器材类的，你们有吗？', '有的亲，我们有跑步机，杠铃，深蹲架，跑步机等等户内的健身器材', '买#健身#器材', '产品类');
 INSERT INTO `question` VALUES ('17', '跑步机多少钱一台 ', ' 亲，500元一台', '多少#钱#台', '价格');
-INSERT INTO `question` VALUES ('18', '那杠铃呢', '嗯！杠铃要100快哦', '杠铃#呢', '价格');
 INSERT INTO `question` VALUES ('19', '好的，谢谢。', '谢谢您的光临，欢迎下次再来。', '好的#谢谢', '其他');
 INSERT INTO `question` VALUES ('20', '还有其它快递吗？', '我们还有邮政，如果可以的话，我们可以发邮政的', '还有#其它', '快递');
 INSERT INTO `question` VALUES ('23', '售后如何', '我们会竭诚为您服务', '售后', '售后');

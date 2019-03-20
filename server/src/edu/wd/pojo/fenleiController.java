@@ -98,5 +98,21 @@ public class fenleiController extends Controller {
 			renderJson(js.toJSONString());
 		}
 	}
+	
+	// 更新
+		public void updates() {
+			try {
+				getModel(fenlei.class, "", true).update();
+				JSONObject js = new JSONObject();
+				js.put("code", "200");
+				renderJson(js.toJSONString());
+			} catch (Exception e) {
+				// TODO: handle exception
+				JSONObject js = new JSONObject();
+				js.put("code", 500);
+				js.put("msg", e.toString());
+				renderJson(js.toJSONString());
+			}
+		}
 
 }

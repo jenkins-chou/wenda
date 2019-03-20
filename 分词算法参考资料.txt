@@ -1,0 +1,7 @@
+浅谈分词算法（1）：http://www.cnblogs.com/xlturing/p/8465965.html
+浅谈分词算法（2）：https://www.cnblogs.com/xlturing/p/8467021.html
+浅谈分词算法（3）：https://www.cnblogs.com/xlturing/p/8467033.html
+浅谈分词算法（4）：https://www.cnblogs.com/xlturing/p/10161840.html
+
+中文分词基本算法主要分类：https://www.cnblogs.com/racaljk/p/7822304.html
+分词算法思路分析：https://blog.csdn.net/qq_33999844/article/details/81513492
