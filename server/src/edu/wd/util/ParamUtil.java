@@ -20,7 +20,7 @@ public class ParamUtil {
 	}
 	
 	public int getPageSize() {
-		return getParaToInt("pageSize",100);
+		return getParaToInt("pageSize",15);
 	}
 	public int getPageNumber() {
 		return getParaToInt("page",1);

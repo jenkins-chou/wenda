@@ -22,8 +22,7 @@ var resetSwClose = function(isClose) {
 	});
 }
 
-var loadList = function(first) {
-	layui.config({base : "js/"}).use([ 'form', 'layer', 'jquery', 'laypage', 'table' , 'upload'],
+var loadList = function(first) {layui.config({base : "js/"}).use([ 'form', 'layer', 'jquery', 'laypage', 'table' , 'upload'],
 					function() {
 						var form = layui.form, layer = layui.layer, laypage = layui.laypage, $ = layui.jquery;
 						var table = layui.table;
